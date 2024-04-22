@@ -1,0 +1,84 @@
+/* Fonts */
+@font-face {
+    font-family: "PT Sans";
+    src: url("/fonts/PTSans-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "PT Sans";
+    src: url("/fonts/PTSans-Italic.ttf") format("truetype");
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "PT Sans";
+    src: url("/fonts/PTSans-BoldItalic.ttf") format("truetype");
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "PT Sans";
+    src: url("/fonts/PTSans-Bold.ttf") format("truetype");
+    font-weight: bold;
+    font-style: normal;
+}
+
+/* Class Variables */
+
+.hidden {
+    display: none !important;
+}
+
+/* Site Styles */
+
+* {
+    font-family: "PT Sans", "Roboto", sans-serif;
+}
+
+body {
+    display: block;
+    margin: 0;
+    padding: 0.5em;
+}
+
+.mobile-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.brand a {
+    font-size: 1.75em;
+    text-decoration: none;
+    color: black;
+}
+
+.menu-icon {
+    display: flex;
+    justify-content: center;
+}
+
+.nav-links {
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25em;
+}
+
+.nav-links {
+    transition: all;
+}
+
+.nav-link-item a {
+    text-decoration: none;
+    color: black;
+}
+
+.active {
+    font-weight: bold;
+}

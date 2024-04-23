@@ -29,26 +29,27 @@
 
 /* Class Variables */
 
-.hidden {
-    display: none !important;
-}
-
 /* Site Styles */
 
 * {
     font-family: "PT Sans", "Roboto", sans-serif;
+    margin: 0;
 }
 
 body {
     display: block;
-    margin: 0;
-    padding: 0.5em;
+    margin: 0.5em;
 }
 
 .mobile-bar {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    height: 2.5em;
+    background-color: white;
+    margin: -0.5em;
+    padding: 0.5em;
+    margin-bottom: 0em;
 }
 
 .brand a {
@@ -63,11 +64,28 @@ body {
 }
 
 .nav-links {
+    position: relative;
     padding: 0;
     list-style: none;
     display: flex;
     flex-direction: column;
     gap: 1.25em;
+    top: -225px;
+    margin-bottom: -150px;
+    z-index: -1;
+}
+
+.nav-links.show,
+.nav-links.hidden {
+    display: flex;
+    transition-property: top, margin-bottom;
+    transition-duration: 0.25s;
+    transition-timing-function: ease-in-out;
+}
+
+.show {
+    top: 0px;
+    margin: 0px;
 }
 
 .nav-links {
@@ -81,4 +99,18 @@ body {
 
 .active {
     font-weight: bold;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    padding: 0.5em;
+}
+
+p {
+    text-align: center;
 }

@@ -10,23 +10,59 @@
         <nav>
             <header class="mobile-bar">
                 <div class="brand"><a href="#">BK</a></div>
-                <button onclick="toggleMobileMenu()">
+                <button id="menuButton" onclick="toggleMobileMenu()">
                     <image class="menu-icon" src="svg/menu.svg"></image>
                 </button>
             </header>
             <ul id="navLinks" class="nav-links hidden">
-                <li class="nav-link-item active"><a href="#">Home</a></li>
                 <li class="nav-link-item"><a href="#">About</a></li>
-                <li class="nav-link-item"><a href="#">Projects</a></li>
+                <li class="nav-link-item">
+                    <a href="#projectsScroll">Projects</a>
+                </li>
                 <li class="nav-link-item"><a href="#">Contact</a></li>
             </ul>
         </nav>
         <main>
             <h1>Hello! I'm Brenden.</h1>
-            <p>
-                I am a Software Developer and current student at Fanshawe
-                College.
-            </p>
+            <div id="heroSection" class="container">
+                <p>
+                    I am a software developer, based in Ontario, Canada,
+                    specializing in full stack development.
+                </p>
+                <div id="portraitContainer" class="container">
+                    <img id="portrait" src="img/portrait.png" />
+                </div>
+            </div>
+            <div id="about" class="container">
+                <p>
+                    I am currently working towards a college diploma at Fanshawe
+                    College in Computer Programming and Analysis. During my time
+                    at Fanshawe, I have learned many different languages and
+                    frameworks, and have been able to successfully demonstrate
+                    my ability to create software from the ground up.
+                </p>
+            </div>
+            <div id="projects" class="container">
+                <h1 id="projectsScroll">Projects</h1>
+                <div class="project-item">
+                    <div><img /></div>
+                    <div>
+                        <h2>Test</h2>
+                        <p>Description</p>
+                        <div>
+                            <div>Tag</div>
+                            <div>Tag</div>
+                            <div>Tag</div>
+                            <div>Tag</div>
+                            <div>Tag</div>
+                        </div>
+                        <div>
+                            <div>View</div>
+                            <div>GitHub Link</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </main>
         <script src="js/index.js"></script>
     </body>

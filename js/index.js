@@ -1,11 +1,22 @@
 const navItems = document.getElementById("navLinks");
 const navLinks = document.getElementsByClassName("nav-link-item");
+const menuBtn = document.getElementById("menuButton");
+const closeBtn = document.getElementById("closeButton");
+
+navItems.addEventListener("transitionstart", function (event) {
+    if (event.propertyName === "top") {
+        closeBtn.classList.toggle("hide");
+        menuBtn.classList.toggle("hide");
+    }
+});
 
 navItems.addEventListener("transitionend", function (event) {
-    if (navItems.classList.contains("hidden")) {
-        navItems.style.zIndex = -1;
+    if (event.propertyName === "top") {
+        if (navItems.classList.contains("hidden")) {
+            navItems.style.zIndex = -1;
+        }
+        navItems.style.zIndex = 0;
     }
-    navItems.style.zIndex = 0;
 });
 
 navItems.addEventListener("transitionstart", function (event) {

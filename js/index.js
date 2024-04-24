@@ -12,9 +12,8 @@ navItems.addEventListener("transitionstart", function (event) {
     navItems.style.zIndex = -1;
 });
 
-Array.prototype.forEach.call(navLinks, function (event) {
-    event.addEventListener("click", function (e) {
-        console.log("click!");
+[].forEach.call(navLinks, function (navLink) {
+    navLink.addEventListener("click", function (event) {
         navItems.classList.toggle("show");
         navItems.classList.toggle("hidden");
     });

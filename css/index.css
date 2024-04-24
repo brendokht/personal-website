@@ -1,4 +1,3 @@
-/* Fonts */
 @font-face {
     font-family: "PT Sans";
     src: url("/fonts/PTSans-Regular.ttf") format("truetype");
@@ -44,8 +43,9 @@
 
 body {
     display: block;
-    margin: 1em;
+    margin: 0 1em;
     background-color: #444;
+    color: white;
 }
 
 .mobile-bar {
@@ -54,7 +54,6 @@ body {
     justify-content: space-between;
     height: 2.5em;
     background-color: #444;
-    margin: -1em;
     padding: 1em;
     margin-bottom: 0em;
 }
@@ -62,7 +61,7 @@ body {
 .brand a {
     font-size: 1.75em;
     text-decoration: none;
-    color: black;
+    color: white;
 }
 
 button#menuButton {
@@ -104,9 +103,15 @@ button#menuButton {
     transition: all;
 }
 
+.nav-link-item {
+    border-bottom: 1px solid white;
+    padding-bottom: 0.5em;
+    text-align: center;
+}
+
 .nav-link-item a {
     text-decoration: none;
-    color: black;
+    color: white;
 }
 
 main {
@@ -166,6 +171,11 @@ h1 {
 .project-description-container p {
     text-align: center;
     font-size: 0.85em;
+    color: black;
+}
+
+.project-description-container h3 {
+    color: black;
 }
 
 .project-tag-container {
@@ -192,4 +202,26 @@ h1 {
 .project-footer > div a {
     text-decoration: none;
     color: black;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    padding: 1em 0;
+    gap: 1em;
+}
+
+.footer-top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.social-link {
+    height: 2em;
+}
+
+#copyright {
+    font-size: 0.75em;
+    text-align: center;
 }

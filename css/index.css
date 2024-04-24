@@ -148,9 +148,12 @@ h1 {
     background-color: black;
 }
 
+#projects {
+    gap: 1em;
+}
+
 .project-item {
     padding: 0.5em;
-    border: 1px solid black;
     border-radius: 0.5em;
     display: flex;
     width: 90vw;
@@ -194,10 +197,16 @@ h1 {
 .project-tag-container {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     gap: 0.5em;
+    width: 85%;
+    justify-content: center;
 }
 
 .project-tag-container > div {
+    min-width: 35px;
+    width: fit-content;
+    text-align: center;
     background-color: red;
     color: white;
     border: 1px solid black;

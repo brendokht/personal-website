@@ -34,3 +34,10 @@ function toggleMobileMenu() {
     navItems.classList.toggle("show");
     navItems.classList.toggle("hidden");
 }
+
+if (window.innerWidth >= 768) {
+    navItems.classList.remove("hidden");
+} else if (window.innerWidth <= 480) {
+    navItems.classList.add("hidden");
+    navItems.classList.remove("show");
+}

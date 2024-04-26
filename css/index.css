@@ -1,3 +1,20 @@
+/* Variables */
+:root {
+    --red: #ff0000;
+    --light-grey: #bbb;
+
+    /* Dark Theme */
+    --bg-color: #444;
+    --secondary-color: #333;
+    --text-color: #fff;
+
+    /* Light Theme
+    --bg-color-light: #fff;
+    --secondary-color-light: #646464;
+    --text-color-light: #000; */
+}
+
+/* Fonts */
 @font-face {
     font-family: "PT Sans";
     src: url("/fonts/PTSans-Regular.ttf") format("truetype");
@@ -62,8 +79,8 @@ a.disabled {
 body {
     display: block;
     padding: 0 1em;
-    background-color: #444;
-    color: white;
+    background-color: var(--bg-color);
+    color: var(--text-color);
 }
 
 .mobile-bar {
@@ -71,7 +88,7 @@ body {
     flex-direction: row;
     justify-content: space-between;
     height: 2.5em;
-    background-color: #333;
+    background-color: var(--secondary-color);
     margin-left: -1em;
     margin-right: -1em;
     padding: 1em;
@@ -81,7 +98,7 @@ body {
 .brand a {
     font-size: 1.75em;
     text-decoration: none;
-    color: white;
+    color: var(--text-color);
 }
 
 .button {
@@ -101,7 +118,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 1.25em;
-    top: -225px;
+    top: -275px;
     margin-bottom: -115px;
     z-index: -1;
 }
@@ -121,20 +138,20 @@ body {
 
 .nav-links {
     transition: all;
-    background-color: #333;
+    background-color: var(--secondary-color);
     margin-left: -1em;
     margin-right: -1em;
 }
 
 .nav-link-item {
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid var(--text-color);
     padding-bottom: 0.5em;
     text-align: center;
 }
 
 .nav-link-item a {
     text-decoration: none;
-    color: white;
+    color: var(--text-color);
 }
 
 main {
@@ -174,7 +191,7 @@ h1 {
     flex-direction: row;
     justify-content: space-between;
     height: 15em;
-    background-color: #bbb;
+    background-color: var(--light-grey);
 }
 
 .project-image-container {
@@ -221,7 +238,7 @@ h1 {
     min-width: 35px;
     width: fit-content;
     text-align: center;
-    background-color: red;
+    background-color: var(--red);
     color: white;
     border: 1px solid black;
     border-radius: 0.5em;
@@ -244,12 +261,16 @@ h1 {
     margin: 0 0 1em 0;
 }
 
+#contact p a {
+    color: var(--text-color);
+}
+
 footer {
     display: flex;
     flex-direction: column;
     padding: 1em 0;
     gap: 1em;
-    background-color: #333;
+    background-color: var(--secondary-color);
     margin-left: -1em;
     margin-top: 1em;
     margin-right: -1em;
@@ -270,6 +291,8 @@ footer {
     text-align: center;
 }
 
+/* Media Queries */
+
 @media screen and (min-width: 768px) {
     #menuButton,
     #closeButton {
@@ -288,7 +311,7 @@ footer {
         justify-content: space-between;
         align-items: center;
         right: 1em;
-        background-color: #333;
+        background-color: var(--secondary-color);
         width: calc(100vw - 1em);
     }
 

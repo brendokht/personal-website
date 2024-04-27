@@ -9,4 +9,4 @@ My minimal personal website, for employers and other people to see. Will be addi
 -   JavaScript
 -   Formspree
 
- Feel free to visit the [site!](https://brendenkohut.com").
+ Feel free to visit the [site!](https://brendenkohut.com).

@@ -77,7 +77,7 @@
                             /></svg
                     ></a>
                 </li>
-                <li class="nav-link-item"><a href="#heroSection">About</a></li>
+                <li class="nav-link-item"><a href="#aboutScroll">About</a></li>
                 <li class="nav-link-item">
                     <a href="#projectsScroll">Projects</a>
                 </li>
@@ -87,7 +87,7 @@
             </ul>
         </nav>
         <main>
-            <h1>Hello! I'm Brenden.</h1>
+            <h1 id="aboutScroll">Hello! I'm Brenden.</h1>
             <div id="heroSection" class="container">
                 <p>
                     I am a Software Developer, based in Ontario, Canada,
@@ -187,12 +187,6 @@
                 <h1 id="contactScroll">Contact</h1>
                 <p>Feel free to contact me through one of these methods!</p>
                 <p>
-                    Email:
-                    <a href="mailto:bdkohut002@gmail.com"
-                        >bdkohut002@gmail.com</a
-                    >
-                </p>
-                <p>
                     LinkedIn:
                     <a
                         href="https://www.linkedin.com/in/brendenkohut"
@@ -206,6 +200,33 @@
                         >brendokht</a
                     >
                 </p>
+                <form
+                    action="https://formspree.io/f/mzbnynwl"
+                    method="POST"
+                    id="contact-form"
+                    class="container"
+                >
+                    <h3>Or Contact me through this form!</h3>
+                    <input
+                        type="text"
+                        name="name"
+                        placeholder="Name"
+                        required
+                    />
+                    <input
+                        type="email"
+                        name="email"
+                        placeholder="Email"
+                        required
+                    />
+                    <textarea
+                        name="message"
+                        placeholder="Message"
+                        required
+                    ></textarea>
+                    <!-- your other form fields go here -->
+                    <button type="submit">Send</button>
+                </form>
             </div>
         </main>
         <footer>

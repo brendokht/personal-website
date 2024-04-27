@@ -124,7 +124,7 @@ body {
     flex-direction: column;
     gap: 1.25em;
     top: -275px;
-    margin-bottom: -115px;
+    margin-bottom: -175px;
     z-index: -1;
 }
 
@@ -181,6 +181,7 @@ h1 {
 
 #portraitContainer {
     margin: 0.5em;
+    border-radius: 10px;
     background-color: black;
 }
 
@@ -270,6 +271,35 @@ h1 {
     color: var(--text-color);
 }
 
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 85%;
+    margin: 1em 0;
+    gap: 1em;
+}
+
+#contact-form input,
+#contact-form textarea {
+    width: 100%;
+    padding: 1em 0.5em;
+    border: 2px solid var(--red);
+    border-radius: 10px;
+    font-size: 0.75em;
+}
+
+#contact-form textarea {
+    height: 150px;
+}
+
+#contact-form button {
+    padding: 0.5em 1.25em;
+    border: 2px solid var(--red);
+    border-radius: 10px;
+    font-size: 0.75em;
+}
+
 footer {
     display: flex;
     flex-direction: column;
@@ -355,5 +385,9 @@ footer {
 
     #portraitContainer {
         width: fit-content;
+    }
+
+    #contact-form {
+        width: 50%;
     }
 }

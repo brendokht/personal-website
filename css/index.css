@@ -287,6 +287,11 @@ h1 {
     border: 2px solid var(--red);
     border-radius: 10px;
     font-size: 0.75em;
+    background-color: var(--light-grey);
+}
+#contact-form input::placeholder,
+#contact-form textarea::placeholder {
+    color: black;
 }
 
 #contact-form textarea {
@@ -298,6 +303,8 @@ h1 {
     border: 2px solid var(--red);
     border-radius: 10px;
     font-size: 0.75em;
+    background-color: var(--light-grey);
+    color: black;
 }
 
 footer {
@@ -351,6 +358,10 @@ footer {
     }
 
     .container {
+        width: 75%;
+    }
+
+    .container p {
         width: 75%;
     }
 

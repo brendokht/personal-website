@@ -33,7 +33,7 @@ function changeTheme() {
 
 function changeScreenSize() {
     console.log("changeScreenSize");
-    if (window.innerWidth <= 768) {
+    if (window.innerWidth <= 1201) {
         navItems.classList.add("hide");
         navItems.classList.remove("show");
         closeBtn.classList.add("hide");

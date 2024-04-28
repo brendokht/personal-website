@@ -20,7 +20,7 @@ function changeTheme() {
         // Change to light
         theme = "light";
         document.body.style.setProperty("--bg-color", "#fff");
-        document.body.style.setProperty("--secondary-color", "#bbbbbb");
+        document.body.style.setProperty("--secondary-color", "#a3a3a3");
         document.body.style.setProperty("--text-color", "#000");
     } else {
         // Change to dark

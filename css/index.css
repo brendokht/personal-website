@@ -13,34 +13,13 @@
 /* Fonts */
 @font-face {
     font-family: "PT Sans";
-    src: url("/fonts/PTSans-Regular.ttf") format("truetype");
+    src: url("/fonts/PTSans-Regular.woff2") format("woff2");
     font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: "PT Sans";
-    src: url("/fonts/PTSans-Italic.ttf") format("truetype");
-    font-weight: normal;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: "PT Sans";
-    src: url("/fonts/PTSans-BoldItalic.ttf") format("truetype");
-    font-weight: bold;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: "PT Sans";
-    src: url("/fonts/PTSans-Bold.ttf") format("truetype");
-    font-weight: bold;
+    font-display: swap;
     font-style: normal;
 }
 
 /* Class Variables */
-
 .container {
     display: flex;
     flex-direction: column;
@@ -70,23 +49,10 @@ a.disabled {
 }
 
 /* Site Styles */
-
-* {
+/* * {
     font-family: "PT Sans", "Roboto", sans-serif;
     margin: 0;
-}
-
-body {
-    display: block;
-    padding: 0 2.5em;
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    overflow-x: hidden;
-}
-
-#about p {
-    width: 75%;
-}
+} */
 
 .mobile-bar {
     display: flex;
@@ -108,11 +74,6 @@ body {
 .button {
     border: none;
     background: none;
-}
-
-.menu-icon {
-    display: flex;
-    justify-content: center;
 }
 
 .nav-links {
@@ -184,6 +145,11 @@ h1 {
     background-color: black;
 }
 
+#portrait {
+    width: 200px;
+    height: 200px;
+}
+
 #projects {
     gap: 1em;
     width: 100%;
@@ -214,6 +180,7 @@ h1 {
 
 .project-image-mobile {
     height: 100%;
+    width: max-content;
     border-radius: 0.5em;
 }
 
@@ -241,7 +208,7 @@ h1 {
     flex-direction: row;
     flex-wrap: wrap;
     gap: 0.5em;
-    width: 85%;
+    width: 100%;
     justify-content: center;
 }
 
@@ -329,15 +296,14 @@ footer {
 }
 
 .social-link {
-    height: 2em;
+    height: 36px;
+    width: 100%;
 }
 
 #copyright {
     font-size: 0.75em;
     text-align: center;
 }
-
-/* Media Queries */
 
 @media screen and (min-width: 1025px) {
     #menuButton,

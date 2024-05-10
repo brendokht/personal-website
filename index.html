@@ -39,7 +39,7 @@
                     id="menuButton"
                     class="button"
                     onclick="toggleMobileMenu()"
-                    aria-label="Menu Toggle"
+                    aria-label="Menu Toggle Open"
                 >
                     <svg
                         id="menuIcon"
@@ -58,6 +58,7 @@
                     id="closeButton"
                     class="button hide"
                     onclick="toggleMobileMenu()"
+                    aria-label="Menu Toggle Close"
                 >
                     <svg
                         id="closeIcon"
@@ -256,8 +257,7 @@
                         placeholder="Message"
                         required
                     ></textarea>
-                    <!-- your other form fields go here -->
-                    <button type="submit">Send</button>
+                    <button type="submit" aria-label="Send form">Send</button>
                 </form>
             </div>
         </main>

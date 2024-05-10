@@ -34,6 +34,7 @@
                     id="menuButton"
                     class="button"
                     onclick="toggleMobileMenu()"
+                    aria-label="Menu Toggle"
                 >
                     <svg
                         id="menuIcon"
@@ -114,7 +115,11 @@
                     specializing in Full Stack Development.
                 </p>
                 <div id="portraitContainer" class="container">
-                    <img id="portrait" src="img/portrait.v1.0.png" />
+                    <img
+                        id="portrait"
+                        src="img/portrait.v1.0.png"
+                        alt="Portrait"
+                    />
                 </div>
             </div>
             <div id="about" class="container">
@@ -142,10 +147,11 @@
                         <img
                             class="project-image-desktop"
                             src="img/project-images/odin-proj-admin.v1.0.png"
+                            alt="Admin Dashboard Image"
                         />
                     </div>
                     <div class="project-description-container">
-                        <h3>Admin Dashboard</h3>
+                        <h2>Admin Dashboard</h2>
                         <p>
                             A part of the Odin Project, this is just a simple
                             project to practice some generic HTML and CSS.
@@ -173,10 +179,11 @@
                         <img
                             class="project-image-mobile"
                             src="img/project-images/mass-message.v1.0.png"
+                            alt="Mass Message App Image"
                         />
                     </div>
                     <div class="project-description-container">
-                        <h3>Mass Message App</h3>
+                        <h2>Mass Message App</h2>
                         <p>
                             A school project where you can use SMS or Email to
                             message multiple people.
@@ -226,7 +233,7 @@
                     id="contact-form"
                     class="container"
                 >
-                    <h3>Or Contact me through this form!</h3>
+                    <h2>Or Contact me through this form!</h2>
                     <input
                         type="text"
                         name="name"
@@ -251,15 +258,23 @@
         </main>
         <footer>
             <div class="footer-top">
-                <a href="https://www.github.com/brendokht" target="_blank"
+                <a
+                    href="https://www.github.com/brendokht"
+                    target="_blank"
+                    aria-label="Check out my GitHub"
                     ><img
                         class="social-link"
                         src="img/github-mark-white.v1.0.png"
+                        alt="Github"
                 /></a>
                 <a
                     href="https://www.linkedin.com/in/brendenkohut"
                     target="_blank"
-                    ><img class="social-link" src="img/LI-In-Bug.v1.0.png"
+                    aria-label="Check out my LinkedIn"
+                    ><img
+                        class="social-link"
+                        src="img/LI-In-Bug.v1.0.png"
+                        alt="LinkedIn"
                 /></a>
             </div>
             <p id="copyright">

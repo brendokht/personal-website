@@ -1,7 +1,7 @@
 /* Variables */
 :root {
     /* Other colours used */
-    --red: #ff0000;
+    --red: #b10000;
     --light-grey: #bbb;
 
     /* Default Theme */
@@ -199,7 +199,8 @@ h1 {
     color: black;
 }
 
-.project-description-container h3 {
+.project-description-container h2 {
+    font-size: 1.15em;
     color: black;
 }
 
@@ -250,6 +251,10 @@ h1 {
     width: 100%;
     margin: 1em 0;
     gap: 1em;
+}
+
+#contact-form h2 {
+    font-size: 1.33em;
 }
 
 #contact-form input,

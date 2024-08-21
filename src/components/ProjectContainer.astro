@@ -1,0 +1,16 @@
+---
+const { title, description } = Astro.props;
+---
+
+<a href="#">
+    <section
+        class="w-72 h-72 bg-white p-2 rounded-md flex flex-col hover:scale-110 cursor-pointer duration-500 ease-in-out"
+    >
+        <!-- <img src="/grey-background.png" /> -->
+        <div>test</div>
+        <div class="py-1 text-lg font-semibold">{title}</div>
+        <div class="flex-grow text-neutral-400 text-sm">
+            {description}
+        </div>
+    </section>
+</a>

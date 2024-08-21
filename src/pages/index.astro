@@ -1,24 +1,45 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import ProjectContainer from "../components/ProjectContainer.astro";
 ---
 
 <Layout title="Home">
-    <section class="flex-grow">
+    <section class="flex justify-center min-h-96 md:min-h-0 md:max-h-72">
         <div
-            class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 md:w-[36rem]"
+            class="flex flex-col flex-1 xl:justify-end justify-center items-center py-14 px-4 min-h-96 max-w-3xl"
         >
-            <div class="flex flex-col items-center">
-                <h1
-                    class="text-5xl md:text-6xl text-center font-semibold py-8 leading-tight"
-                >
-                    Hey, I'm Brenden Kohut
-                </h1>
-                <p class="text-lg md:text-xl text-center">
-                    A Full-stack Developer dedicated to building scalable and
-                    high-quality applications that drive results
-                </p>
-            </div>
+            <h1
+                class="text-5xl md:text-6xl text-center font-semibold py-8 leading-tight"
+            >
+                Hey, I'm Brenden Kohut
+            </h1>
+            <p class="text-lg md:text-xl text-center">
+                A Full-stack Developer dedicated to building scalable and
+                high-quality applications that drive results
+            </p>
         </div>
     </section>
-    <section class="flex-grow"></section>
+    <section
+        class="flex flex-col w-screen justify-center items-center my-8 flex-grow"
+    >
+        <h2 class="font-semibold text-2xl pb-14">
+            Take a look at my projects!
+        </h2>
+        <div
+            class="flex md:flex-row flex-wrap justify-evenly items-center px-8 lg:gap-16 gap-8"
+        >
+            <ProjectContainer
+                title="Test"
+                description="Et voluptua labore vero volutpat eirmod duo kasd et labore erat lorem molestie kasd no amet. Duo ut feugiat ullamcorper gubergren dolor diam et autem accusam."
+            />
+            <ProjectContainer
+                title="Test"
+                description="Et voluptua labore vero volutpat eirmod duo kasd et labore erat lorem molestie kasd no amet. Duo ut feugiat ullamcorper gubergren dolor diam et autem accusam."
+            />
+            <ProjectContainer
+                title="Test"
+                description="Et voluptua labore vero volutpat eirmod duo kasd et labore erat lorem molestie kasd no amet. Duo ut feugiat ullamcorper gubergren dolor diam et autem accusam."
+            />
+        </div>
+    </section>
 </Layout>

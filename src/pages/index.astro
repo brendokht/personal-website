@@ -3,5 +3,22 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Home">
-    <h1>This is the main page</h1>
+    <section class="flex-grow">
+        <div
+            class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 md:w-[36rem]"
+        >
+            <div class="flex flex-col items-center">
+                <h1
+                    class="text-5xl md:text-6xl text-center font-semibold py-8 leading-tight"
+                >
+                    Hey, I'm Brenden Kohut
+                </h1>
+                <p class="text-lg md:text-xl text-center">
+                    A Full-stack Developer dedicated to building scalable and
+                    high-quality applications that drive results
+                </p>
+            </div>
+        </div>
+    </section>
+    <section class="flex-grow"></section>
 </Layout>

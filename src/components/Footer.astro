@@ -1,5 +1,8 @@
 ---
-
+import { Image } from "astro:assets";
+import githubLogo from "../images/github-mark-white.png";
+import linkedinLogo from "../images/linkedin-bug.png";
+import xLogo from "../images/github-mark-white.png";
 ---
 
 <footer class="mt-auto bg-black text-white pb-2 pt-6 lg:pt-2">
@@ -27,20 +30,16 @@
                     target="_blank"
                     class="hover:scale-125 transition ease-in-out duration-200"
                 >
-                    <img
-                        class="w-9"
-                        src="/github-mark-white.png"
-                        alt="GitHub Logo"
-                    />
+                    <Image class="w-9" src={githubLogo} alt="GitHub Logo" />
                 </a>
                 <a
                     href="https://linkedin.com/in/brendenkohut"
                     target="_blank"
                     class="hover:scale-125 transition ease-in-out duration-200"
                 >
-                    <img
+                    <Image
                         class="w-10"
-                        src="/linkedin-bug.png"
+                        src={linkedinLogo}
                         alt="LinkedIn Logo"
                     />
                 </a>
@@ -49,7 +48,7 @@
                     target="_blank"
                     class="hover:scale-125 transition ease-in-out duration-200"
                 >
-                    <img class="w-8" src="/x-white.png" alt="X Logo" />
+                    <Image class="w-8" src={xLogo} alt="X Logo" />
                 </a>
             </div>
         </div>

@@ -1,12 +1,16 @@
 ---
+import { Image } from "astro:assets";
+import project1Img from "../images/mass-message-app.png";
+import project2Img from "../images/odin-calculator.png";
+import project3Img from "../images/placeholder.png";
 import Layout from "../layouts/Layout.astro";
 import ProjectContainer from "../components/ProjectContainer.astro";
 ---
 
 <Layout title="Home">
-    <section class="flex justify-center min-h-96 md:min-h-0 md:max-h-72">
+    <section class="flex justify-center min-h-[26rem]">
         <div
-            class="flex flex-col flex-1 xl:justify-end justify-center items-center py-14 px-4 min-h-96 max-w-3xl"
+            class="flex flex-col flex-1 justify-end items-center xl:py-16 py-24 px-4 min-h-96 max-w-3xl"
         >
             <h1
                 class="text-5xl md:text-6xl text-center font-semibold py-8 leading-tight"
@@ -20,22 +24,22 @@ import ProjectContainer from "../components/ProjectContainer.astro";
         </div>
     </section>
     <section
-        class="flex flex-col w-screen justify-center items-center my-8 flex-grow"
+        class="flex flex-col w-screen justify-start items-center my-8 flex-grow"
     >
-        <h2 class="font-semibold text-2xl pb-14">
+        <h2 class="font-semibold text-4xl pb-14 text-center">
             Take a look at my projects!
         </h2>
         <div
             class="flex md:flex-row flex-wrap justify-evenly items-center px-8 lg:gap-16 gap-8"
         >
             <ProjectContainer>
-                <img
+                <Image
                     slot="image"
-                    src="/mass-message-app.png"
+                    src={project1Img}
                     class="rounded-md"
                     alt="Image of Mass Message App"
                 />
-                <h3 slot="title">Mass Message App</h3>
+                <h2 slot="title">Mass Message App</h2>
                 <p slot="description">
                     A school project for my Mobile Development class. Users can
                     import their contacts so they can send a message or email to
@@ -43,9 +47,9 @@ import ProjectContainer from "../components/ProjectContainer.astro";
                 </p>
             </ProjectContainer>
             <ProjectContainer>
-                <img
+                <Image
                     slot="image"
-                    src="/odin-calculator.png"
+                    src={project2Img}
                     class="rounded-md"
                     alt="Image of Calculator Website"
                 />
@@ -57,9 +61,9 @@ import ProjectContainer from "../components/ProjectContainer.astro";
                 </p>
             </ProjectContainer>
             <ProjectContainer>
-                <img
+                <Image
                     slot="image"
-                    src="/placeholder.png"
+                    src={project3Img}
                     class="rounded-md"
                     alt="No image yet, sorry!"
                 />

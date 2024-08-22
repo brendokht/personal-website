@@ -28,18 +28,49 @@ import ProjectContainer from "../components/ProjectContainer.astro";
         <div
             class="flex md:flex-row flex-wrap justify-evenly items-center px-8 lg:gap-16 gap-8"
         >
-            <ProjectContainer
-                title="Test"
-                description="Et voluptua labore vero volutpat eirmod duo kasd et labore erat lorem molestie kasd no amet. Duo ut feugiat ullamcorper gubergren dolor diam et autem accusam."
-            />
-            <ProjectContainer
-                title="Test"
-                description="Et voluptua labore vero volutpat eirmod duo kasd et labore erat lorem molestie kasd no amet. Duo ut feugiat ullamcorper gubergren dolor diam et autem accusam."
-            />
-            <ProjectContainer
-                title="Test"
-                description="Et voluptua labore vero volutpat eirmod duo kasd et labore erat lorem molestie kasd no amet. Duo ut feugiat ullamcorper gubergren dolor diam et autem accusam."
-            />
+            <ProjectContainer>
+                <img
+                    slot="image"
+                    src="/mass-message-app.png"
+                    class="rounded-md"
+                    alt="Image of Mass Message App"
+                />
+                <h3 slot="title">Mass Message App</h3>
+                <p slot="description">
+                    A school project for my Mobile Development class. Users can
+                    import their contacts so they can send a message or email to
+                    multiple of them separately.
+                </p>
+            </ProjectContainer>
+            <ProjectContainer>
+                <img
+                    slot="image"
+                    src="/odin-calculator.png"
+                    class="rounded-md"
+                    alt="Image of Calculator Website"
+                />
+                <h3 slot="title">Calculator</h3>
+                <p slot="description">
+                    A simple calculator website, that was done while doing parts
+                    of the Odin Project. Supports basic and some more
+                    intermediate mathematical operations.
+                </p>
+            </ProjectContainer>
+            <ProjectContainer>
+                <img
+                    slot="image"
+                    src="/placeholder.png"
+                    class="rounded-md"
+                    alt="No image yet, sorry!"
+                />
+                <h3 slot="title">Blogging Website</h3>
+                <p slot="description">
+                    A work in progress web application, that will allow users to
+                    sign up and post blog posts using a Markdown editor, comment
+                    on others' posts, and browse posts, even if they are not
+                    registered.
+                </p>
+            </ProjectContainer>
         </div>
     </section>
 </Layout>

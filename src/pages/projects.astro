@@ -1,41 +1,35 @@
 ---
 import { Image } from "astro:assets";
-import project1Img from "../images/mass-message-app.png";
-import project2Img from "../images/personal-website.png";
-import project3Img from "../images/placeholder.png";
-import Layout from "../layouts/Layout.astro";
+import massMessageApp from "../images/mass-message-app.png";
+import odinCalculator from "../images/odin-calculator.png";
+import placeholder from "../images/placeholder.png";
+import personalWebsite from "../images/personal-website.png";
 import ProjectContainer from "../components/ProjectContainer.astro";
+import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout title="Home">
-    <section class="flex justify-center min-h-[26rem]">
+<Layout title="Projects">
+    <section class="flex justify-center min-h-64">
         <div
-            class="flex flex-col flex-1 justify-center items-center px-4 min-h-96 max-w-3xl"
+            class="flex flex-col flex-1 justify-center items-center px-4 max-w-3xl"
         >
             <h1
                 class="text-5xl md:text-6xl text-center font-semibold py-8 leading-tight"
             >
-                Hey, I'm Brenden Kohut
+                Projects
             </h1>
-            <p class="text-lg md:text-xl text-center">
-                A Full-stack Developer dedicated to building scalable and
-                high-quality applications that drive results
-            </p>
         </div>
     </section>
     <section
         class="flex flex-col w-screen justify-start items-center my-8 flex-grow"
     >
-        <h2 class="font-semibold text-4xl pb-14 text-center">
-            Recent Projects
-        </h2>
         <div
             class="flex md:flex-row flex-wrap justify-evenly items-center px-8 lg:gap-16 gap-8"
         >
             <ProjectContainer>
                 <Image
                     slot="image"
-                    src={project1Img}
+                    src={massMessageApp}
                     class="rounded-md max-h-56 w-auto"
                     alt="Image of Mass Message App"
                 />
@@ -49,7 +43,7 @@ import ProjectContainer from "../components/ProjectContainer.astro";
             <ProjectContainer>
                 <Image
                     slot="image"
-                    src={project2Img}
+                    src={personalWebsite}
                     class="rounded-md max-h-56 w-auto"
                     alt="Image of Calculator Website"
                 />
@@ -64,7 +58,7 @@ import ProjectContainer from "../components/ProjectContainer.astro";
             <ProjectContainer>
                 <Image
                     slot="image"
-                    src={project3Img}
+                    src={placeholder}
                     class="rounded-md max-h-56 w-auto"
                     alt="No image yet, sorry!"
                 />
@@ -74,6 +68,20 @@ import ProjectContainer from "../components/ProjectContainer.astro";
                     sign up and post blog posts using a Markdown editor, comment
                     on others' posts, and browse posts, even if they are not
                     registered.
+                </p>
+            </ProjectContainer>
+            <ProjectContainer>
+                <Image
+                    slot="image"
+                    src={odinCalculator}
+                    class="rounded-md max-h-56 w-auto"
+                    alt="Image of Calculator Website"
+                />
+                <h3 slot="title">Calculator</h3>
+                <p slot="description">
+                    A simple calculator website, done while doing parts of the
+                    Odin Project. Supports basic some intermediate math
+                    operations.
                 </p>
             </ProjectContainer>
         </div>

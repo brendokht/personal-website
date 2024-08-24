@@ -5,6 +5,7 @@ My minimal personal website, for employers and other people to see. Will be addi
 ## Tools Used
 
 -   Astro
+-   MDX
 -   HTML
 -   CSS
 -   Tailwind CSS

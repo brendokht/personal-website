@@ -34,9 +34,13 @@ const { frontmatter } = Astro.props;
                 </div>
             </section>
             <section
-                class="flex flex-col w-full justify-start items-center py-8 text-xl flex-grow px-8 md:px-16"
+                class="flex flex-col w-full justify-start items-center py-8 text-xl flex-grow px-12"
             >
-                <slot />
+                <div
+                    class="flex flex-col justify-start items-center w-full md:w-3/4 xl:w-2/3"
+                >
+                    <slot />
+                </div>
             </section>
             <Footer />
         </main>

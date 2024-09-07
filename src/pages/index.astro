@@ -1,8 +1,8 @@
 ---
 import { Image } from "astro:assets";
-import project1Img from "../images/mass-message-app.png";
-import project2Img from "../images/personal-website.png";
-import project3Img from "../images/placeholder.png";
+import massMessageAppImg from "../images/mass-message-app.png";
+import personalSiteImg from "../images/personal-website.png";
+import placeholderImg from "../images/placeholder.png";
 import Layout from "../layouts/Layout.astro";
 import ProjectContainer from "../components/ProjectContainer.astro";
 ---
@@ -32,10 +32,10 @@ import ProjectContainer from "../components/ProjectContainer.astro";
         <div
             class="flex md:flex-row flex-wrap justify-evenly items-center px-8 lg:gap-16 gap-8"
         >
-            <ProjectContainer>
+            <ProjectContainer reference="projects/mass-message-app">
                 <Image
                     slot="image"
-                    src={project1Img}
+                    src={massMessageAppImg}
                     class="rounded-md max-h-56 w-auto"
                     alt="Image of Mass Message App"
                 />
@@ -46,10 +46,10 @@ import ProjectContainer from "../components/ProjectContainer.astro";
                     multiple of them separately.
                 </p>
             </ProjectContainer>
-            <ProjectContainer>
+            <ProjectContainer reference="projects/personal-website">
                 <Image
                     slot="image"
-                    src={project2Img}
+                    src={personalSiteImg}
                     class="rounded-md max-h-56 w-auto"
                     alt="Image of Calculator Website"
                 />
@@ -61,10 +61,10 @@ import ProjectContainer from "../components/ProjectContainer.astro";
                     at school and on the side.
                 </p>
             </ProjectContainer>
-            <ProjectContainer>
+            <ProjectContainer reference="projects/blogging-website">
                 <Image
                     slot="image"
-                    src={project3Img}
+                    src={placeholderImg}
                     class="rounded-md max-h-56 w-auto"
                     alt="No image yet, sorry!"
                 />

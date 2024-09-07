@@ -26,7 +26,7 @@ import Layout from "../layouts/Layout.astro";
         <div
             class="flex md:flex-row flex-wrap justify-evenly items-center px-8 lg:gap-16 gap-8"
         >
-            <ProjectContainer>
+            <ProjectContainer reference="mass-message-app">
                 <Image
                     slot="image"
                     src={massMessageApp}
@@ -40,7 +40,7 @@ import Layout from "../layouts/Layout.astro";
                     multiple of them separately.
                 </p>
             </ProjectContainer>
-            <ProjectContainer>
+            <ProjectContainer reference="personal-website">
                 <Image
                     slot="image"
                     src={personalWebsite}
@@ -55,7 +55,7 @@ import Layout from "../layouts/Layout.astro";
                     at school and on the side.
                 </p>
             </ProjectContainer>
-            <ProjectContainer>
+            <ProjectContainer reference="blogging-website">
                 <Image
                     slot="image"
                     src={placeholder}
@@ -70,7 +70,7 @@ import Layout from "../layouts/Layout.astro";
                     registered.
                 </p>
             </ProjectContainer>
-            <ProjectContainer>
+            <ProjectContainer reference="calculator">
                 <Image
                     slot="image"
                     src={odinCalculator}

@@ -2,6 +2,7 @@
 
 ---
 
+<!-- Medium screen navbar -->
 <nav
     class="flex flex-row justify-between px-6 py-2 drop-shadow-lg z-10 fixed w-full bg-white"
 >
@@ -59,35 +60,45 @@
     </div>
 </nav>
 
+<!-- Mobile menu -->
 <div
-    class="navbar-menu fixed drop-shadow-lg hidden mb-5 bg-white w-full z-20 mt-12"
+    class="navbar-menu fixed drop-shadow-lg invisible mb-5 bg-white w-full z-20 mt-12"
 >
     <ul>
         <li
             class="text-lg p-0 h-14 my-2 cursor-pointer hover:bg-gray-100 hover:rounded-md"
         >
-            <a class="m-0 flex items-center pl-6 h-full w-full" href="/">Home</a
+            <a
+                class="m-0 flex items-center pl-6 h-full w-full"
+                href="/"
+                aria-label="home">Home</a
             >
         </li>
         <li
             class="text-lg p-0 h-14 my-2 cursor-pointer hover:bg-gray-100 hover:rounded-md"
         >
-            <a class="m-0 flex items-center pl-6 h-full w-full" href="/about"
-                >About</a
+            <a
+                class="m-0 flex items-center pl-6 h-full w-full"
+                href="/about"
+                aria-label="about">About</a
             >
         </li>
         <li
             class="text-lg p-0 h-14 my-2 cursor-pointer hover:bg-gray-100 hover:rounded-md"
         >
-            <a class="m-0 flex items-center pl-6 h-full w-full" href="/projects"
-                >Projects</a
+            <a
+                class="m-0 flex items-center pl-6 h-full w-full"
+                href="/projects"
+                aria-label="projects">Projects</a
             >
         </li>
         <li
             class="text-lg p-0 h-14 my-2 cursor-pointer hover:bg-gray-100 hover:rounded-md"
         >
-            <a class="m-0 flex items-center pl-6 h-full w-full" href="/contact"
-                >Contact</a
+            <a
+                class="m-0 flex items-center pl-6 h-full w-full"
+                href="/contact"
+                aria-label="contact">Contact</a
             >
         </li>
     </ul>
@@ -101,7 +112,7 @@
 
         if (burger && menu && close) {
             burger.addEventListener("click", function () {
-                menu.classList.toggle("hidden");
+                menu.classList.toggle("invisible");
                 this.classList.toggle("hidden");
                 close.classList.toggle("hidden");
                 // done to avoid issues with hidden and inline-flex being together
@@ -109,7 +120,7 @@
             });
 
             close.addEventListener("click", function () {
-                menu.classList.toggle("hidden");
+                menu.classList.toggle("invisible");
                 burger.classList.toggle("hidden");
                 this.classList.toggle("hidden");
                 // done to avoid issues with hidden and inline-flex being together
@@ -119,9 +130,9 @@
             window.addEventListener("resize", function () {
                 if (
                     this.innerWidth >= 768 &&
-                    !menu.classList.contains("hidden")
+                    !menu.classList.contains("invisible")
                 ) {
-                    menu.classList.toggle("hidden");
+                    menu.classList.toggle("invisible");
                     burger.classList.toggle("hidden");
                     close.classList.toggle("hidden");
                 }

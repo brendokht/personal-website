@@ -1,37 +1,29 @@
 ---
 import { Image } from "astro:assets";
-import massMessageApp from "../images/mass-message-app.png";
-import odinCalculator from "../images/odin-calculator.png";
-import placeholder from "../images/placeholder.png";
-import personalWebsite from "../images/personal-website.png";
+import massMessageAppImg from "../images/mass-message-app.png";
+import odinCalculatorImg from "../images/odin-calculator.png";
+import placeholderImg from "../images/placeholder.png";
+import personalWebsiteImg from "../images/personal-website.png";
 import ProjectContainer from "../components/ProjectContainer.astro";
 import Layout from "../layouts/Layout.astro";
+import Title from "../components/Title.astro";
 ---
 
 <Layout title="Projects">
-    <section class="flex justify-center min-h-64">
-        <div
-            class="flex flex-col flex-1 justify-center items-center px-4 max-w-3xl"
-        >
-            <h1
-                class="text-5xl md:text-6xl text-center font-semibold py-8 leading-tight"
-            >
-                Projects
-            </h1>
-        </div>
-    </section>
+    <Title title="Projects" />
     <section
         class="flex flex-col w-full justify-start items-center my-8 flex-grow"
     >
         <div
             class="flex md:flex-row flex-wrap justify-evenly items-center px-8 lg:gap-16 gap-8"
         >
-            <ProjectContainer reference="mass-message-app">
+            <ProjectContainer reference="projects/mass-message-app">
                 <Image
+                    loading="eager"
                     slot="image"
-                    src={massMessageApp}
+                    src={massMessageAppImg}
                     class="rounded-md max-h-56 w-auto"
-                    alt="Image of Mass Message App"
+                    alt="Send email screen of Mass Message App"
                 />
                 <h2 slot="title">Mass Message App</h2>
                 <p slot="description">
@@ -40,12 +32,13 @@ import Layout from "../layouts/Layout.astro";
                     multiple of them separately.
                 </p>
             </ProjectContainer>
-            <ProjectContainer reference="personal-website">
+            <ProjectContainer reference="projects/personal-website">
                 <Image
+                    loading="eager"
                     slot="image"
-                    src={personalWebsite}
+                    src={personalWebsiteImg}
                     class="rounded-md max-h-56 w-auto"
-                    alt="Image of Calculator Website"
+                    alt="Personal website"
                 />
                 <h3 slot="title">Personal Website</h3>
                 <p slot="description">
@@ -55,33 +48,50 @@ import Layout from "../layouts/Layout.astro";
                     at school and on the side.
                 </p>
             </ProjectContainer>
-            <ProjectContainer reference="blogging-website">
+            <ProjectContainer reference="projects/championsgg">
                 <Image
+                    loading="eager"
                     slot="image"
-                    src={placeholder}
+                    src={placeholderImg}
                     class="rounded-md max-h-56 w-auto"
-                    alt="No image yet, sorry!"
+                    alt="Placeholder for work in progress project"
                 />
-                <h3 slot="title">Blogging Website</h3>
+                <h3 slot="title">Champions GG</h3>
                 <p slot="description">
-                    A work in progress web application, that will allow users to
-                    sign up and post blog posts using a Markdown editor, comment
-                    on others' posts, and browse posts, even if they are not
-                    registered.
+                    A work in progress web application, that is an Esports
+                    tournament and league hosting platform, It will offer
+                    simplistic and user-friendly hosting, allowing anyone to
+                    host events.
                 </p>
             </ProjectContainer>
-            <ProjectContainer reference="calculator">
+            <ProjectContainer reference="projects/calculator">
                 <Image
+                    loading="eager"
                     slot="image"
-                    src={odinCalculator}
+                    src={odinCalculatorImg}
                     class="rounded-md max-h-56 w-auto"
-                    alt="Image of Calculator Website"
+                    alt="Calculator main page"
                 />
                 <h3 slot="title">Calculator</h3>
                 <p slot="description">
                     A simple calculator website, done while doing parts of the
                     Odin Project. Supports basic some intermediate math
                     operations.
+                </p>
+            </ProjectContainer>
+            <ProjectContainer reference="projects/chat-system">
+                <Image
+                    loading="eager"
+                    slot="image"
+                    src={placeholderImg}
+                    class="rounded-md max-h-56 w-auto"
+                    alt="Main screen of Chat System app"
+                />
+                <h3 slot="title">Chat System</h3>
+                <p slot="description">
+                    A school project for my advanced mobile development class.
+                    Users can register and log in, search up their other people
+                    by their usernames, and begin chatting in real time.
                 </p>
             </ProjectContainer>
         </div>

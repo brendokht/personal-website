@@ -1,0 +1,15 @@
+---
+const { title } = Astro.props;
+---
+
+<section class="flex justify-center md:min-h-72">
+    <div
+        class="flex flex-col flex-1 justify-center items-center px-4 max-w-3xl"
+    >
+        <h1
+            class="text-5xl md:text-6xl text-center font-semibold py-8 leading-tight"
+        >
+            {title}
+        </h1>
+    </div>
+</section>

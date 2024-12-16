@@ -5,23 +5,16 @@ import personalSiteImg from "../images/personal-website.png";
 import placeholderImg from "../images/placeholder.png";
 import Layout from "../layouts/Layout.astro";
 import ProjectContainer from "../components/ProjectContainer.astro";
+import Title from "../components/Title.astro";
 ---
 
 <Layout title="Home">
-    <section class="flex justify-center min-h-[26rem]">
-        <div
-            class="flex flex-col flex-1 justify-center items-center px-4 min-h-96 max-w-3xl"
-        >
-            <h1
-                class="text-5xl md:text-6xl text-center font-semibold py-8 leading-tight"
-            >
-                Hey, I'm Brenden Kohut
-            </h1>
-            <p class="text-lg md:text-xl text-center">
-                A Full-stack Developer dedicated to building scalable and
-                high-quality applications that drive results
-            </p>
-        </div>
+    <Title title="Hey, I'm Brenden Kohut" />
+    <section>
+        <p class="text-lg md:text-xl text-center">
+            A Full-stack Developer dedicated to building scalable and
+            high-quality applications that drive results.
+        </p>
     </section>
     <section
         class="flex flex-col w-full justify-start items-center my-8 flex-grow"
@@ -34,10 +27,11 @@ import ProjectContainer from "../components/ProjectContainer.astro";
         >
             <ProjectContainer reference="projects/mass-message-app">
                 <Image
+                    loading="eager"
                     slot="image"
                     src={massMessageAppImg}
                     class="rounded-md max-h-56 w-auto"
-                    alt="Image of Mass Message App"
+                    alt="Send email screen of Mass Message App"
                 />
                 <h2 slot="title">Mass Message App</h2>
                 <p slot="description">
@@ -48,10 +42,11 @@ import ProjectContainer from "../components/ProjectContainer.astro";
             </ProjectContainer>
             <ProjectContainer reference="projects/personal-website">
                 <Image
+                    loading="eager"
                     slot="image"
                     src={personalSiteImg}
                     class="rounded-md max-h-56 w-auto"
-                    alt="Image of Calculator Website"
+                    alt="Calculator main page"
                 />
                 <h3 slot="title">Personal Website</h3>
                 <p slot="description">
@@ -61,19 +56,20 @@ import ProjectContainer from "../components/ProjectContainer.astro";
                     at school and on the side.
                 </p>
             </ProjectContainer>
-            <ProjectContainer reference="projects/blogging-website">
+            <ProjectContainer reference="projects/championsgg">
                 <Image
+                    loading="eager"
                     slot="image"
                     src={placeholderImg}
                     class="rounded-md max-h-56 w-auto"
-                    alt="No image yet, sorry!"
+                    alt="Placeholder for work in progress project"
                 />
-                <h3 slot="title">Blogging Website</h3>
+                <h3 slot="title">Champions GG</h3>
                 <p slot="description">
-                    A work in progress web application, that will allow users to
-                    sign up and post blog posts using a Markdown editor, comment
-                    on others' posts, and browse posts, even if they are not
-                    registered.
+                    A work in progress web application, that is an Esports
+                    tournament and league hosting platform, It will offer
+                    simplistic and user-friendly hosting, allowing anyone to
+                    host events.
                 </p>
             </ProjectContainer>
         </div>

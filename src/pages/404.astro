@@ -1,0 +1,24 @@
+---
+import { Image } from "astro:assets";
+import massMessageAppImg from "../images/mass-message-app.png";
+import personalSiteImg from "../images/personal-website.png";
+import placeholderImg from "../images/placeholder.png";
+import Layout from "../layouts/Layout.astro";
+import ProjectContainer from "../components/ProjectContainer.astro";
+import Title from "../components/Title.astro";
+---
+
+<Layout title="404: Not Found">
+    <Title title="Page not found!" />
+    <section
+        class="flex flex-col w-full justify-start items-center my-8 flex-grow"
+    >
+        <p class="text-lg md:text-xl text-center">
+            Looks like this page does not exist yet! If you think this is
+            possibly an error, feel free to let me know using my <a
+                class="underline"
+                href="/contact">Contact</a
+            > form.
+        </p>
+    </section>
+</Layout>

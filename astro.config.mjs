@@ -5,8 +5,8 @@ import mdx from "@astrojs/mdx";
 
 // https://astro.build/config
 export default defineConfig({
-  devToolbar: {
-    enabled: false
-  },
-  integrations: [tailwind(), mdx()]
+    devToolbar: {
+        enabled: true,
+    },
+    integrations: [tailwind(), mdx()],
 });

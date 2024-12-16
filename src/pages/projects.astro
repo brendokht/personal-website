@@ -15,9 +15,9 @@ import Title from "../components/Title.astro";
         class="flex flex-col w-full justify-start items-center my-8 flex-grow"
     >
         <div
-            class="flex md:flex-row flex-wrap max-w-[66%] justify-evenly items-center px-8 lg:gap-16 gap-8"
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-16 items-end"
         >
-            <ProjectContainer reference="projects/mass-message-app">
+            <ProjectContainer reference="mass-message-app">
                 <Image
                     loading="eager"
                     slot="image"
@@ -32,7 +32,7 @@ import Title from "../components/Title.astro";
                     multiple of them separately.
                 </p>
             </ProjectContainer>
-            <ProjectContainer reference="projects/personal-website">
+            <ProjectContainer reference="personal-website">
                 <Image
                     loading="eager"
                     slot="image"
@@ -48,7 +48,7 @@ import Title from "../components/Title.astro";
                     at school and on the side.
                 </p>
             </ProjectContainer>
-            <ProjectContainer reference="projects/championsgg">
+            <ProjectContainer reference="championsgg">
                 <Image
                     loading="eager"
                     slot="image"
@@ -64,7 +64,7 @@ import Title from "../components/Title.astro";
                     host events.
                 </p>
             </ProjectContainer>
-            <ProjectContainer reference="projects/calculator">
+            <ProjectContainer reference="calculator">
                 <Image
                     loading="eager"
                     slot="image"
@@ -79,7 +79,7 @@ import Title from "../components/Title.astro";
                     operations.
                 </p>
             </ProjectContainer>
-            <ProjectContainer reference="projects/chat-system">
+            <ProjectContainer reference="chat-system">
                 <Image
                     loading="eager"
                     slot="image"
@@ -92,6 +92,22 @@ import Title from "../components/Title.astro";
                     A school project for my advanced mobile development class.
                     Users can register and log in, search up their other people
                     by their usernames, and begin chatting in real time.
+                </p>
+            </ProjectContainer>
+            <ProjectContainer reference="cacatua">
+                <Image
+                    loading="eager"
+                    slot="image"
+                    src={placeholderImg}
+                    class="rounded-md max-h-56 w-auto"
+                    alt="Main screen of Cacatua application"
+                />
+                <h3 slot="title">Cacatua</h3>
+                <p slot="description">
+                    A capstone project for my managing software projects class.
+                    It is an open source
+                    <cite>Discord</cite>-like desktop application, geared
+                    towards project management.
                 </p>
             </ProjectContainer>
         </div>

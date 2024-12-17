@@ -7,10 +7,11 @@ import netlify from "@astrojs/netlify";
 
 // https://astro.build/config
 export default defineConfig({
-  devToolbar: {
-      enabled: true,
-  },
-
-  integrations: [tailwind(), mdx()],
-  adapter: netlify(),
+    devToolbar: {
+        enabled: true,
+    },
+    integrations: [tailwind(), mdx()],
+    adapter: netlify(),
+    site: "https://brendenkohut.com",
+    trailingSlash: "always",
 });

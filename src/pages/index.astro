@@ -1,6 +1,6 @@
 ---
 import { Image } from "astro:assets";
-import placeholderImg from "../images/placeholder.png";
+import personalWebsiteImg from "../images/personal-website.png";
 import cacatuaImg from "../images/cacatua.png";
 import chatSystemImg from "../images/chat-system.png";
 import Layout from "../layouts/Layout.astro";
@@ -23,7 +23,7 @@ import Title from "../components/Title.astro";
         <div
             class="flex md:flex-row flex-wrap justify-evenly items-center px-8 lg:gap-16 gap-8"
         >
-            <ProjectContainer reference="projects/chat-system">
+            <ProjectContainer reference="projects/chat-system/">
                 <Image
                     loading="eager"
                     slot="image"
@@ -38,7 +38,7 @@ import Title from "../components/Title.astro";
                     by their usernames, and begin chatting in real time.
                 </p>
             </ProjectContainer>
-            <ProjectContainer reference="cacatua">
+            <ProjectContainer reference="projects/cacatua/">
                 <Image
                     loading="eager"
                     slot="image"
@@ -54,20 +54,20 @@ import Title from "../components/Title.astro";
                     towards project management.
                 </p>
             </ProjectContainer>
-            <ProjectContainer reference="projects/championsgg">
+            <ProjectContainer reference="projects/personal-website/">
                 <Image
                     loading="eager"
                     slot="image"
-                    src={placeholderImg}
+                    src={personalWebsiteImg}
                     class="rounded-md max-h-56 w-fit"
-                    alt="Placeholder for work in progress project"
+                    alt="Personal website"
                 />
-                <h3 slot="title">Champions GG</h3>
+                <h3 slot="title">Personal Website</h3>
                 <p slot="description">
-                    A work in progress web application, that is an Esports
-                    tournament and league hosting platform, It will offer
-                    simplistic and user-friendly hosting, allowing anyone to
-                    host events.
+                    The website you're currently viewing! Just a simple,
+                    minimalistic website to give viewers more information about
+                    me and show off some of my projects that I do during my time
+                    at school and on the side.
                 </p>
             </ProjectContainer>
         </div>

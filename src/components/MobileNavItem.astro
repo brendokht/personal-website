@@ -1,0 +1,13 @@
+---
+const { text, href } = Astro.props;
+---
+
+<li
+    class="text-lg p-0 h-14 my-2 cursor-pointer hover:bg-neutral-300 dark:hover:bg-neutral-500 hover:rounded-md"
+>
+    <a
+        class="m-0 flex items-center pl-6 h-full w-full"
+        href={href}
+        aria-label={text}>{text}</a
+    >
+</li>

@@ -4,9 +4,11 @@ const { reference } = Astro.props;
 
 <a href={reference}>
     <section
-        class="w-72 min-h-72 max-h-max bg-white p-2 rounded-md flex flex-col hover:scale-110 cursor-pointer duration-500 ease-in-out"
+        class="w-72 min-h-72 max-h-max bg-white dark:bg-black p-2 rounded-md flex flex-col hover:scale-110 cursor-pointer transition-transform duration-500 ease-in-out"
     >
-        <div class="flex justify-center w-full bg-neutral-600 p-2">
+        <div
+            class="flex justify-center w-full bg-neutral-100 dark:bg-neutral-900 rounded-md p-2"
+        >
             <slot name="image" />
         </div>
         <div class="py-1 text-lg font-semibold w-full p-2">

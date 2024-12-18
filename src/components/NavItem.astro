@@ -1,0 +1,11 @@
+---
+const { text, href } = Astro.props;
+---
+
+<li>
+    <a
+        class="text-lg p-2 rounded-md transition-colors duration-200 ease-in-out hover:bg-neutral-300 dark:hover:bg-neutral-500"
+        href={href}
+        aria-label={text}>{text}</a
+    >
+</li>

@@ -1,0 +1,8 @@
+/* CSS because Tailwind does not apply .dark first */
+html {
+  background-color: white;
+}
+
+html.dark {
+  background-color: black;
+}

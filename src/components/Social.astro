@@ -4,9 +4,9 @@ const { imageSrc, imageAlt, href } = Astro.props;
 ---
 
 <a
-    href={href}
-    target="_blank"
-    class="hover:scale-125 transition ease-in-out duration-200"
+  href={href}
+  target="_blank"
+  class="transition duration-200 ease-in-out hover:scale-125"
 >
-    <Image class="w-9" src={imageSrc} alt={imageAlt} />
+  <Image class="w-9" src={imageSrc} alt={imageAlt} />
 </a>

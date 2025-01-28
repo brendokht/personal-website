@@ -8,66 +8,61 @@ import ProjectContainer from "../components/ProjectContainer.astro";
 ---
 
 <Layout title="Hey, I'm Brenden Kohut" tabTitle="Home">
-    <p class="text-lg md:text-xl text-center px-4">
-        A Full-stack Developer dedicated to building scalable and high-quality
-        applications that drive results.
-    </p>
-    <section
-        class="flex flex-col w-full justify-start items-center my-8 grow"
+  <p class="px-4 text-center text-lg md:text-xl">
+    A Full-stack Developer dedicated to building scalable and high-quality
+    applications that drive results.
+  </p>
+  <section class="my-8 flex w-full grow flex-col items-center justify-start">
+    <h2 class="pb-14 text-center text-4xl font-semibold">Notable Projects</h2>
+    <div
+      class="flex flex-wrap items-center justify-evenly gap-8 px-8 md:flex-row lg:gap-16"
     >
-        <h2 class="font-semibold text-4xl pb-14 text-center">
-            Notable Projects
-        </h2>
-        <div
-            class="flex md:flex-row flex-wrap justify-evenly items-center px-8 lg:gap-16 gap-8"
-        >
-            <ProjectContainer reference="projects/chat-system/">
-                <Image
-                    loading="eager"
-                    slot="image"
-                    src={chatSystemImg}
-                    class="rounded-md max-h-56 max-w-24"
-                    alt="Main screen of Chat System app"
-                />
-                <h3 slot="title">Chat System</h3>
-                <p slot="description">
-                    A school project for my advanced mobile development class.
-                    Users can register and log in, search up their other people
-                    by their usernames, and begin chatting in real time.
-                </p>
-            </ProjectContainer>
-            <ProjectContainer reference="projects/cacatua/">
-                <Image
-                    loading="eager"
-                    slot="image"
-                    src={cacatuaImg}
-                    class="rounded-md max-h-56 w-fit"
-                    alt="Main screen of Cacatua application"
-                />
-                <h3 slot="title">Cacatua</h3>
-                <p slot="description">
-                    A capstone project for my managing software projects class.
-                    It is an open source
-                    <cite>Discord</cite>-like desktop application, geared
-                    towards project management.
-                </p>
-            </ProjectContainer>
-            <ProjectContainer reference="projects/personal-website/">
-                <Image
-                    loading="eager"
-                    slot="image"
-                    src={personalWebsiteImg}
-                    class="rounded-md max-h-56 w-fit"
-                    alt="Personal website"
-                />
-                <h3 slot="title">Personal Website</h3>
-                <p slot="description">
-                    The website you're currently viewing! Just a simple,
-                    minimalistic website to give viewers more information about
-                    me and show off some of my projects that I do during my time
-                    at school and on the side.
-                </p>
-            </ProjectContainer>
-        </div>
-    </section>
+      <ProjectContainer reference="projects/chat-system/">
+        <Image
+          loading="eager"
+          slot="image"
+          src={chatSystemImg}
+          class="max-h-56 max-w-24 rounded-md"
+          alt="Main screen of Chat System app"
+        />
+        <h3 slot="title">Chat System</h3>
+        <p slot="description">
+          A school project for my advanced mobile development class. Users can
+          register and log in, search up their other people by their usernames,
+          and begin chatting in real time.
+        </p>
+      </ProjectContainer>
+      <ProjectContainer reference="projects/cacatua/">
+        <Image
+          loading="eager"
+          slot="image"
+          src={cacatuaImg}
+          class="max-h-56 w-fit rounded-md"
+          alt="Main screen of Cacatua application"
+        />
+        <h3 slot="title">Cacatua</h3>
+        <p slot="description">
+          A capstone project for my managing software projects class. It is an
+          open source
+          <cite>Discord</cite>-like desktop application, geared towards project
+          management.
+        </p>
+      </ProjectContainer>
+      <ProjectContainer reference="projects/personal-website/">
+        <Image
+          loading="eager"
+          slot="image"
+          src={personalWebsiteImg}
+          class="max-h-56 w-fit rounded-md"
+          alt="Personal website"
+        />
+        <h3 slot="title">Personal Website</h3>
+        <p slot="description">
+          The website you're currently viewing! Just a simple, minimalistic
+          website to give viewers more information about me and show off some of
+          my projects that I do during my time at school and on the side.
+        </p>
+      </ProjectContainer>
+    </div>
+  </section>
 </Layout>

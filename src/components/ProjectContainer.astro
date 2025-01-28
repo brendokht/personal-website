@@ -3,19 +3,19 @@ const { reference } = Astro.props;
 ---
 
 <a href={reference}>
-    <section
-        class="w-72 min-h-72 max-h-max bg-white dark:bg-black p-2 rounded-md flex flex-col hover:scale-110 cursor-pointer transition-transform duration-500 ease-in-out"
+  <section
+    class="flex max-h-max min-h-72 w-72 cursor-pointer flex-col rounded-md bg-white p-2 transition-transform duration-500 ease-in-out hover:scale-110 dark:bg-black"
+  >
+    <div
+      class="flex w-full justify-center rounded-md bg-neutral-100 p-2 dark:bg-neutral-900"
     >
-        <div
-            class="flex justify-center w-full bg-neutral-100 dark:bg-neutral-900 rounded-md p-2"
-        >
-            <slot name="image" />
-        </div>
-        <div class="py-1 text-lg font-semibold w-full p-2">
-            <slot name="title" />
-        </div>
-        <div class="grow text-neutral-500 text-sm w-full p-2">
-            <slot name="description" />
-        </div>
-    </section>
+      <slot name="image" />
+    </div>
+    <div class="w-full p-2 py-1 text-lg font-semibold">
+      <slot name="title" />
+    </div>
+    <div class="w-full grow p-2 text-sm text-neutral-500">
+      <slot name="description" />
+    </div>
+  </section>
 </a>

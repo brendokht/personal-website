@@ -9,25 +9,25 @@ const { title, tabTitle } = Astro.props;
 ---
 
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-        <meta name="viewport" content="width=device-width initial-scale=1.0" />
-        <meta
-            name="description"
-            content="Personal website for Brenden Kohut, a full-stack developer based in Ontario, Canada."
-        />
-        <meta name="generator" content={Astro.generator} />
-        <title>{tabTitle ?? title}</title>
-    </head>
-    <body
-        class="flex flex-col min-h-screen bg-linear-to-br from-white to-stone-400 dark:from-zinc-800 dark:to-zinc-500 text-black dark:text-white"
-    >
-        <Navbar />
-        <main class="flex flex-col grow pt-16 min-h-screen">
-            <Title title={title} />
-            <slot />
-        </main>
-        <Footer />
-    </body>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Personal website for Brenden Kohut, a full-stack developer based in Ontario, Canada."
+    />
+    <meta name="generator" content={Astro.generator} />
+    <title>{tabTitle ?? title}</title>
+  </head>
+  <body
+    class="flex min-h-screen flex-col bg-linear-to-br from-white to-stone-400 text-black dark:from-zinc-800 dark:to-zinc-500 dark:text-white"
+  >
+    <Navbar />
+    <main class="flex min-h-screen grow flex-col pt-16">
+      <Title title={title} />
+      <slot />
+    </main>
+    <Footer />
+  </body>
 </html>

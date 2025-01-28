@@ -1,8 +1,6 @@
 import { defineConfig } from "astro/config";
-import tailwind from "@astrojs/tailwind";
-
+import tailwindcss from "@tailwindcss/vite";
 import mdx from "@astrojs/mdx";
-
 import netlify from "@astrojs/netlify";
 
 // https://astro.build/config
@@ -10,7 +8,10 @@ export default defineConfig({
     devToolbar: {
         enabled: true,
     },
-    integrations: [tailwind(), mdx()],
+    vite: {
+        plugins: [tailwindcss()],
+    },
+    integrations: [mdx()],
     adapter: netlify(),
     site: "https://brendenkohut.com",
     trailingSlash: "always",

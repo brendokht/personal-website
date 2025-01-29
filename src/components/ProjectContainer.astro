@@ -1,21 +1,28 @@
 ---
-const { reference } = Astro.props;
+const { reference, workInProgress } = Astro.props;
 ---
 
 <a href={reference}>
-  <section
-    class="flex max-h-max min-h-72 w-72 cursor-pointer flex-col rounded-md bg-white p-2 transition-transform duration-500 ease-in-out hover:scale-110 dark:bg-black"
-  >
-    <div
-      class="flex w-full justify-center rounded-md bg-neutral-100 p-2 dark:bg-neutral-900"
+    <section
+        class="flex max-h-max min-h-72 w-72 cursor-pointer flex-col rounded-md bg-white p-2 transition-transform duration-500 ease-in-out hover:scale-110 dark:bg-black"
     >
-      <slot name="image" />
-    </div>
-    <div class="w-full p-2 py-1 text-lg font-semibold">
-      <slot name="title" />
-    </div>
-    <div class="w-full grow p-2 text-sm text-neutral-500">
-      <slot name="description" />
-    </div>
-  </section>
+        <div
+            class="flex w-full justify-center rounded-md bg-neutral-100 p-2 dark:bg-neutral-900"
+        >
+            <slot name="image" />
+        </div>
+        <div class="w-full p-2 py-1 text-lg font-semibold">
+            <slot name="title" />
+        </div>
+        {
+            workInProgress && (
+                <div class="w-full p-2 py-1 text-xs font-extralight text-neutral-300">
+                    Work in Progress
+                </div>
+            )
+        }
+        <div class="w-full grow p-2 text-sm">
+            <slot name="description" />
+        </div>
+    </section>
 </a>

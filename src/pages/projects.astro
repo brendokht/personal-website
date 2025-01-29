@@ -6,8 +6,10 @@ import placeholderImg from "../images/placeholder.png";
 import personalWebsiteImg from "../images/personal-website.png";
 import cacatuaImg from "../images/cacatua.png";
 import chatSystemImg from "../images/chat-system.png";
+import championsGgImg from "../images/champions-gg.png";
 import ProjectContainer from "../components/ProjectContainer.astro";
 import Layout from "../layouts/Layout.astro";
+import Title from "../components/Title.astro";
 ---
 
 <Layout title="Projects">
@@ -15,6 +17,7 @@ import Layout from "../layouts/Layout.astro";
         <div
             class="grid grid-cols-1 items-end gap-8 md:grid-cols-2 lg:grid-cols-3 lg:gap-16"
         >
+            <Title title="Projects" />
             <ProjectContainer reference="mass-message-app/">
                 <Image
                     loading="eager"
@@ -86,10 +89,59 @@ import Layout from "../layouts/Layout.astro";
                 />
                 <h3 slot="title">Cacatua</h3>
                 <p slot="description">
-                    A capstone project for my managing software projects class.
+                    A capstone project for my Managing Software Projects class.
                     It is an open source
                     <cite>Discord</cite>-like desktop application, geared
                     towards project management.
+                </p>
+            </ProjectContainer>
+            <ProjectContainer reference="cacatua/">
+                <Image
+                    loading="eager"
+                    slot="image"
+                    src={cacatuaImg}
+                    class="max-h-56 w-fit rounded-md"
+                    alt="Main screen of Cacatua application"
+                />
+                <h3 slot="title">Cacatua</h3>
+                <p slot="description">
+                    A capstone project for my Managing Software Projects class.
+                    It is an open source
+                    <cite>Discord</cite>-like desktop application, geared
+                    towards project management.
+                </p>
+            </ProjectContainer>
+            <ProjectContainer reference="champions-gg/" workInProgress={true}>
+                <Image
+                    loading="eager"
+                    slot="image"
+                    src={championsGgImg}
+                    class="max-h-56 w-fit rounded-md"
+                    alt="Home page of Champions GG website"
+                />
+                <h3 slot="title">Champions GG</h3>
+                <p slot="description">
+                    A personal project for Esports event management. Users can
+                    create teams, host leagues, tournaments and other events for
+                    multiple game titles.
+                </p>
+            </ProjectContainer>
+            <ProjectContainer
+                reference="template-company-website/"
+                workInProgress={true}
+            >
+                <Image
+                    loading="eager"
+                    slot="image"
+                    src={placeholderImg}
+                    class="max-h-56 w-fit rounded-md"
+                    alt="Placeholder image"
+                />
+                <h3 slot="title">Template Company Website</h3>
+                <p slot="description">
+                    An open source personal project that anyone can build off
+                    of. It will contain a landing page, a blog, and
+                    authentication for dynamically adding images.
                 </p>
             </ProjectContainer>
         </div>

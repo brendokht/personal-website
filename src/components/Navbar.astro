@@ -5,7 +5,7 @@ import NavItem from "./NavItem.astro";
 
 <!-- Medium screen navbar -->
 <nav
-    class="fixed z-10 flex w-full flex-row justify-between bg-white px-6 py-2 drop-shadow-lg dark:bg-black"
+    class="z-10 flex w-full flex-row justify-between bg-white px-6 py-2 drop-shadow-lg dark:bg-black"
 >
     <span
         class="text-4xl font-bold transition-transform duration-500 ease-in-out hover:rotate-[360deg]"
@@ -13,12 +13,12 @@ import NavItem from "./NavItem.astro";
     >
     <div class="hidden items-center md:flex">
         <ul
-            class="hidden w-full flex-row justify-evenly md:mx-auto md:flex md:items-center md:space-x-14 lg:space-x-28"
+            class="navbar-menu hidden w-full flex-row justify-evenly md:mx-auto md:flex md:items-center md:space-x-14 lg:space-x-28"
         >
             <NavItem href="/" text="Home" />
-            <NavItem href="/about/" text="About" />
-            <NavItem href="/projects/" text="Projects" />
-            <NavItem href="/contact/" text="Contact" />
+            <NavItem href="/#about" text="About" />
+            <NavItem href="/#projects" text="Projects" />
+            <NavItem href="/#contact" text="Contact" />
             <li>
                 <span
                     id="themeToggle"
@@ -91,13 +91,13 @@ import NavItem from "./NavItem.astro";
 
 <!-- Mobile menu -->
 <div
-    class="navbar-menu invisible fixed z-20 mt-12 mb-5 w-full bg-white drop-shadow-lg dark:bg-black"
+    class="navbar-menu-mobile invisible absolute z-20 mt-12 mb-5 w-full bg-white drop-shadow-lg dark:bg-black"
 >
     <ul>
         <MobileNavItem href="/" text="Home" />
-        <MobileNavItem href="/about/" text="About" />
-        <MobileNavItem href="/projects/" text="Projects" />
-        <MobileNavItem href="/contact/" text="Contact" />
+        <MobileNavItem href="/#about" text="About" />
+        <MobileNavItem href="/#projects" text="Projects" />
+        <MobileNavItem href="/#contact" text="Contact" />
         <li
             class="my-2 h-14 cursor-pointer p-0 text-lg hover:rounded-md hover:bg-neutral-300 dark:hover:bg-neutral-500"
         >
@@ -135,41 +135,54 @@ import NavItem from "./NavItem.astro";
     </ul>
 </div>
 
-<script is:inline>
+<script>
     document.addEventListener("DOMContentLoaded", function () {
         const burger = document.querySelector(".navbar-burger");
-        const menu = document.querySelector(".navbar-menu");
+        const mobileMenu = document.querySelector(".navbar-menu-mobile");
         const close = document.querySelector(".navbar-close");
+        const mobileMenuListItems = document.querySelectorAll(
+            ".navbar-menu-mobile li"
+        );
         const themeToggleMobile = document.querySelector("#themeToggleMobile");
         const themeToggle = document.querySelector("#themeToggle");
 
-        if (burger && menu && close) {
-            burger.addEventListener("click", function () {
-                menu.classList.toggle("invisible");
-                this.classList.toggle("hidden");
-                this.classList.toggle("inline-flex");
+        function toggleMobileMenu() {
+            if (burger && mobileMenu && close) {
+                mobileMenu.classList.toggle("invisible");
+                burger.classList.toggle("hidden");
+                burger.classList.toggle("inline-flex");
                 close.classList.toggle("hidden");
                 close.classList.toggle("inline-flex");
+            }
+        }
+
+        if (burger && mobileMenu && close) {
+            burger.addEventListener("click", function () {
+                toggleMobileMenu();
             });
 
             close.addEventListener("click", function () {
-                menu.classList.toggle("invisible");
-                burger.classList.toggle("hidden");
-                burger.classList.toggle("inline-flex");
-                this.classList.toggle("hidden");
-                this.classList.toggle("inline-flex");
+                toggleMobileMenu();
             });
 
             window.addEventListener("resize", function () {
                 if (
                     this.innerWidth >= 768 &&
-                    !menu.classList.contains("invisible")
+                    !mobileMenu.classList.contains("invisible")
                 ) {
-                    menu.classList.toggle("invisible");
+                    mobileMenu.classList.toggle("invisible");
                     burger.classList.toggle("hidden");
                     close.classList.toggle("hidden");
                 }
             });
+
+            if (mobileMenuListItems) {
+                mobileMenuListItems.forEach((li) => {
+                    li.addEventListener("click", function () {
+                        toggleMobileMenu();
+                    });
+                });
+            }
         }
 
         const theme = (() => {

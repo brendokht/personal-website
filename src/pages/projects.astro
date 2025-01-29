@@ -14,10 +14,8 @@ import Title from "../components/Title.astro";
 
 <Layout title="Projects">
     <section class="my-8 flex w-full grow flex-col items-center justify-start">
-        <div
-            class="grid grid-cols-1 items-end gap-8 md:grid-cols-2 lg:grid-cols-3 lg:gap-16"
-        >
-            <Title title="Projects" />
+        <Title title="Projects" />
+        <div class="flex flex-wrap justify-center gap-8 lg:w-5xl">
             <ProjectContainer reference="mass-message-app/">
                 <Image
                     loading="eager"

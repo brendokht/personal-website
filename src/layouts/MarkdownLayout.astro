@@ -1,6 +1,5 @@
 ---
 import Layout from "./Layout.astro";
-import "../styles/global.css";
 import Title from "../components/Title.astro";
 
 const { frontmatter } = Astro.props;
@@ -12,7 +11,7 @@ const { frontmatter } = Astro.props;
         class="mb-8 flex w-full grow flex-col items-center justify-start px-4 text-xl"
     >
         <div
-            class="prose dark:prose-invert prose-lg lg:prose-xl prose-orange flex w-full flex-col justify-start md:w-3/4 xl:w-2/3"
+            class="prose dark:prose-invert prose-orange flex flex-col justify-start"
         >
             <slot />
         </div>

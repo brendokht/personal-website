@@ -11,7 +11,10 @@ import ContactForm from "../components/ContactForm.astro";
 ---
 
 <Layout>
-    <section id="hero" class="flex h-[36rem] flex-col justify-center gap-4">
+    <section
+        id="hero"
+        class="flex h-[36rem] flex-col justify-center gap-4 md:h-[52rem]"
+    >
         <h1>
             <span class="text-2xl font-medium">Hey, I'm</span><br /><span
                 class="text-4xl font-bold">Brenden Kohut</span
@@ -19,15 +22,15 @@ import ContactForm from "../components/ContactForm.astro";
         </h1>
         <p class="text-xl font-semibold">Full-Stack Developer</p>
         <p>
-            Recent graduate of Fanshawe College, committed to building high
-            quality and scalable applications
+            Recent graduate from Fanshawe College, committed to building high
+            quality and scalable applications.
         </p>
     </section>
     <section id="about" class="flex flex-col gap-8">
         <h1 class="mt-4 text-center text-4xl font-bold">About</h1>
         <section id="story" class="flex flex-col gap-4">
-            <h2 class="text-center text-xl font-semibold">Story</h2>
-            <p class="text-sm">
+            <h2 class="text-center text-2xl font-semibold">Story</h2>
+            <p>
                 Hey! I'm Brenden Kohut, a Software Developer based in London,
                 Ontario. I am a new grad out of Fanshawe College's Computer
                 Programming and Analysis program. I specialize in Full-stack
@@ -35,22 +38,19 @@ import ContactForm from "../components/ContactForm.astro";
                 comfortable on various other technologies and am always willing
                 to learn more.
             </p>
-            <p class="text-sm">
+            <p>
                 I am always looking for new oppotunities and connections, and am
                 currently looking for a entry level position, so feel free to
                 reach out and connect with me if you like what you see!
             </p>
         </section>
         <section id="tools-and-technologies" class="flex flex-col gap-4">
-            <h2 class="text-center text-xl font-semibold">
+            <h2 class="text-center text-2xl font-semibold">
                 Tools and Technologies
             </h2>
             <section id="main" class="flex flex-col gap-4">
                 <div class="flex flex-col items-center">
-                    <h3 class="text-center font-semibold">Main</h3>
-                    <p class="w-2/3 text-center text-xs font-semibold">
-                        The stack I typically use
-                    </p>
+                    <h3 class="text-center font-semibold">My Stack</h3>
                 </div>
                 <div class="flex flex-wrap justify-center gap-4">
                     <SkillTag>ASP.NET Core</SkillTag>
@@ -63,11 +63,7 @@ import ContactForm from "../components/ContactForm.astro";
             </section>
             <section id="other" class="flex flex-wrap justify-center gap-4">
                 <div class="flex flex-col items-center">
-                    <h3 class="text-center font-semibold">Other</h3>
-                    <p class="w-2/3 text-center text-xs font-semibold">
-                        Some other tools that I have used before or am currently
-                        using
-                    </p>
+                    <h3 class="text-center font-semibold">Additional Tools</h3>
                 </div>
                 <div class="flex flex-wrap justify-center gap-4">
                     <SkillTag>Next.js</SkillTag>
@@ -86,58 +82,62 @@ import ContactForm from "../components/ContactForm.astro";
     </section>
     <section id="projects" class="flex flex-col items-center gap-8">
         <h1 class="mt-4 text-center text-4xl font-bold">Projects</h1>
-        <ProjectContainer reference="projects/cacatua/">
-            <Image
-                loading="eager"
-                slot="image"
-                src={cacatuaImg}
-                class="max-h-56 w-fit rounded-md"
-                alt="Main screen of Cacatua application"
-            />
-            <h3 slot="title">Cacatua</h3>
-            <p slot="description">
-                A capstone project for my Managing Software Projects class. It
-                is a is a
-                <cite>Discord</cite>-like desktop application, geared towards
-                project management.
-            </p>
-        </ProjectContainer>
-        <ProjectContainer
-            reference="projects/champions-gg/"
-            workInProgress={true}
+        <section
+            class="flex flex-col gap-8 md:flex-row md:flex-wrap md:justify-center"
         >
-            <Image
-                loading="eager"
-                slot="image"
-                src={championsGgImg}
-                class="max-h-56 w-fit rounded-md"
-                alt="Home page of Champions GG website"
-            />
-            <h3 slot="title">Champions GG</h3>
-            <p slot="description">
-                A personal project for Esports event management. Users can
-                create teams, host leagues, tournaments and other events for
-                multiple game titles.
-            </p>
-        </ProjectContainer>
-        <ProjectContainer
-            reference="projects/template-company-website/"
-            workInProgress={true}
-        >
-            <Image
-                loading="eager"
-                slot="image"
-                src={placeholderImg}
-                class="max-h-56 w-fit rounded-md"
-                alt="Placeholder image"
-            />
-            <h3 slot="title">Template Company Website</h3>
-            <p slot="description">
-                An open source personal project that anyone can build off of. It
-                will contain a landing page, a blog, and authentication for
-                dynamically adding images.
-            </p>
-        </ProjectContainer>
+            <ProjectContainer reference="projects/cacatua/">
+                <Image
+                    loading="eager"
+                    slot="image"
+                    src={cacatuaImg}
+                    class="max-h-56 w-fit rounded-md"
+                    alt="Main screen of Cacatua application"
+                />
+                <h3 slot="title">Cacatua</h3>
+                <p slot="description">
+                    A capstone project for my Managing Software Projects class.
+                    It is a is a
+                    <cite>Discord</cite>-like desktop application, geared
+                    towards project management.
+                </p>
+            </ProjectContainer>
+            <ProjectContainer
+                reference="projects/champions-gg/"
+                workInProgress={true}
+            >
+                <Image
+                    loading="eager"
+                    slot="image"
+                    src={championsGgImg}
+                    class="max-h-56 w-fit rounded-md"
+                    alt="Home page of Champions GG website"
+                />
+                <h3 slot="title">Champions GG</h3>
+                <p slot="description">
+                    A personal project for Esports event management. Users can
+                    create teams, host leagues, tournaments and other events for
+                    multiple game titles.
+                </p>
+            </ProjectContainer>
+            <ProjectContainer
+                reference="projects/template-company-website/"
+                workInProgress={true}
+            >
+                <Image
+                    loading="eager"
+                    slot="image"
+                    src={placeholderImg}
+                    class="max-h-56 w-fit rounded-md"
+                    alt="Placeholder image"
+                />
+                <h3 slot="title">Template Company Website</h3>
+                <p slot="description">
+                    An open source personal project that anyone can build off
+                    of. It will contain a landing page, a blog, and
+                    authentication for dynamically adding images.
+                </p>
+            </ProjectContainer>
+        </section>
         <CallToAction reference="projects/" text="More Projects" />
     </section>
     <section id="contact" class="flex flex-col items-center gap-8">

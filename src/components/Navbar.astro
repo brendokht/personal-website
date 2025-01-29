@@ -5,7 +5,7 @@ import NavItem from "./NavItem.astro";
 
 <!-- Medium screen navbar -->
 <nav
-    class="z-10 flex w-full flex-row justify-between bg-white px-6 py-2 drop-shadow-lg dark:bg-black"
+    class="z-10 flex w-full flex-row justify-between bg-[#9796f0] px-6 py-2 drop-shadow-lg dark:bg-[#0f0c29]"
 >
     <span
         class="text-4xl font-bold transition-transform duration-500 ease-in-out hover:rotate-[360deg]"
@@ -59,7 +59,7 @@ import NavItem from "./NavItem.astro";
         >
             <button aria-label="Open menu button"
                 ><svg
-                    class="fill-black dark:fill-white"
+                    class="fill-black hover:cursor-pointer dark:fill-white"
                     xmlns="http://www.w3.org/2000/svg"
                     height="24px"
                     viewBox="0 -960 960 960"
@@ -71,11 +71,11 @@ import NavItem from "./NavItem.astro";
             >
         </div>
         <div
-            class="navbar-close hidden cursor-pointer items-center rounded-md p-2 hover:bg-neutral-300 dark:hover:bg-neutral-500"
+            class="navbar-close hidden cursor-pointer items-center rounded-md p-2 hover:cursor-pointer hover:bg-neutral-300 dark:hover:bg-neutral-500"
         >
             <button aria-label="Close menu button"
                 ><svg
-                    class="fill-black dark:fill-white"
+                    class="fill-black hover:cursor-pointer dark:fill-white"
                     xmlns="http://www.w3.org/2000/svg"
                     height="24px"
                     viewBox="0 -960 960 960"
@@ -91,7 +91,7 @@ import NavItem from "./NavItem.astro";
 
 <!-- Mobile menu -->
 <div
-    class="navbar-menu-mobile invisible absolute z-20 mt-12 mb-5 w-full bg-white drop-shadow-lg dark:bg-black"
+    class="navbar-menu-mobile invisible absolute z-20 mt-12 mb-5 w-full bg-[#9796f0] drop-shadow-lg dark:bg-[#0f0c29]"
 >
     <ul class="drop-shadow-lg">
         <MobileNavItem href="/" text="Home" />
@@ -137,6 +137,7 @@ import NavItem from "./NavItem.astro";
 
 <script>
     document.addEventListener("DOMContentLoaded", function () {
+        const nav = document.querySelector("nav");
         const burger = document.querySelector(".navbar-burger");
         const mobileMenu = document.querySelector(".navbar-menu-mobile");
         const close = document.querySelector(".navbar-close");
@@ -147,7 +148,7 @@ import NavItem from "./NavItem.astro";
         const themeToggle = document.querySelector("#themeToggle");
 
         function toggleMobileMenu() {
-            if (burger && mobileMenu && close) {
+            if (nav && burger && mobileMenu && close) {
                 mobileMenu.classList.toggle("invisible");
                 mobileMenu.classList.toggle("drop-shadow-lg");
                 burger.classList.toggle("hidden");
@@ -157,7 +158,7 @@ import NavItem from "./NavItem.astro";
             }
         }
 
-        if (burger && mobileMenu && close) {
+        if (nav && burger && mobileMenu && close) {
             burger.addEventListener("click", function () {
                 toggleMobileMenu();
             });

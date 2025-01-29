@@ -4,29 +4,28 @@ import Footer from "../components/Footer.astro";
 import Title from "../components/Title.astro";
 import "../styles/global.css";
 
-const { title, tabTitle } = Astro.props;
+const { title } = Astro.props;
 ---
 
 <html lang="en" class="bg-black">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Personal website for Brenden Kohut, a full-stack developer based in Ontario, Canada."
-    />
-    <meta name="generator" content={Astro.generator} />
-    <title>{tabTitle ?? title}</title>
-  </head>
-  <body
-    class="flex min-h-screen flex-col bg-linear-to-br from-white to-stone-400 text-black dark:from-zinc-800 dark:to-zinc-500 dark:text-white"
-  >
-    <Navbar />
-    <main class="flex min-h-screen grow flex-col pt-16">
-      <Title title={title} />
-      <slot />
-    </main>
-    <Footer />
-  </body>
+    <head>
+        <meta charset="utf-8" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <meta name="viewport" content="width=device-width initial-scale=1.0" />
+        <meta
+            name="description"
+            content="Personal website for Brenden Kohut, a full-stack developer based in Ontario, Canada."
+        />
+        <meta name="generator" content={Astro.generator} />
+        <title>{title ? `Brenden Kohut - ${title}` : "Brenden Kohut"}</title>
+    </head>
+    <body
+        class="flex min-h-screen flex-col bg-linear-to-br from-[#a8c0ff] to-[#3f2b96] text-black dark:from-[#0f0c29] dark:via-[#302b63] dark:to-[#24243e] dark:text-white"
+    >
+        <Navbar />
+        <main class="flex min-h-screen grow flex-col gap-8 px-4 pt-16">
+            <slot />
+        </main>
+        <Footer />
+    </body>
 </html>

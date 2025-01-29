@@ -1,6 +1,5 @@
 @import "tailwindcss";
-
-@plugin '@tailwindcss/typography';
+@plugin "@tailwindcss/typography";
 
 @custom-variant dark (&:is(.dark *));
 
@@ -20,4 +19,16 @@
   ::file-selector-button {
     border-color: var(--color-gray-200, currentColor);
   }
+}
+
+@font-face {
+  font-family: "Geist Mono";
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: auto;
+  src: url("/fonts/GeistMono-VariableFont_wght.ttf") format("truetype");
+}
+
+@theme {
+  --default-font-family: "Geist Mono", "sans-serif";
 }

@@ -11,85 +11,87 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Projects">
-  <section class="my-8 flex w-full grow flex-col items-center justify-start">
-    <div
-      class="grid grid-cols-1 items-end gap-8 md:grid-cols-2 lg:grid-cols-3 lg:gap-16"
-    >
-      <ProjectContainer reference="mass-message-app/">
-        <Image
-          loading="eager"
-          slot="image"
-          src={massMessageAppImg}
-          class="max-h-56 w-fit rounded-md"
-          alt="Send email screen of Mass Message App"
-        />
-        <h2 slot="title">Mass Message App</h2>
-        <p slot="description">
-          A school project for my Mobile Development class. Users can import
-          their contacts so they can send a message or email to multiple of them
-          separately.
-        </p>
-      </ProjectContainer>
-      <ProjectContainer reference="personal-website/">
-        <Image
-          loading="eager"
-          slot="image"
-          src={personalWebsiteImg}
-          class="max-h-56 w-fit rounded-md"
-          alt="Personal website"
-        />
-        <h3 slot="title">Personal Website</h3>
-        <p slot="description">
-          The website you're currently viewing! Just a simple, minimalistic
-          website to give viewers more information about me and show off some of
-          my projects that I do during my time at school and on the side.
-        </p>
-      </ProjectContainer>
-      <ProjectContainer reference="calculator/">
-        <Image
-          loading="eager"
-          slot="image"
-          src={odinCalculatorImg}
-          class="max-h-56 w-fit rounded-md"
-          alt="Calculator main page"
-        />
-        <h3 slot="title">Calculator</h3>
-        <p slot="description">
-          A simple calculator website, done while doing parts of the Odin
-          Project. Supports basic some intermediate math operations.
-        </p>
-      </ProjectContainer>
-      <ProjectContainer reference="chat-system/">
-        <Image
-          loading="eager"
-          slot="image"
-          src={chatSystemImg}
-          class="max-h-56 max-w-24 rounded-md"
-          alt="Main screen of Chat System app"
-        />
-        <h3 slot="title">Chat System</h3>
-        <p slot="description">
-          A school project for my advanced mobile development class. Users can
-          register and log in, search up their other people by their usernames,
-          and begin chatting in real time.
-        </p>
-      </ProjectContainer>
-      <ProjectContainer reference="cacatua/">
-        <Image
-          loading="eager"
-          slot="image"
-          src={cacatuaImg}
-          class="max-h-56 w-fit rounded-md"
-          alt="Main screen of Cacatua application"
-        />
-        <h3 slot="title">Cacatua</h3>
-        <p slot="description">
-          A capstone project for my managing software projects class. It is an
-          open source
-          <cite>Discord</cite>-like desktop application, geared towards project
-          management.
-        </p>
-      </ProjectContainer>
-    </div>
-  </section>
+    <section class="my-8 flex w-full grow flex-col items-center justify-start">
+        <div
+            class="grid grid-cols-1 items-end gap-8 md:grid-cols-2 lg:grid-cols-3 lg:gap-16"
+        >
+            <ProjectContainer reference="mass-message-app/">
+                <Image
+                    loading="eager"
+                    slot="image"
+                    src={massMessageAppImg}
+                    class="max-h-56 w-fit rounded-md"
+                    alt="Send email screen of Mass Message App"
+                />
+                <h2 slot="title">Mass Message App</h2>
+                <p slot="description">
+                    A school project for my Mobile Development class. Users can
+                    import their contacts so they can send a message or email to
+                    multiple of them separately.
+                </p>
+            </ProjectContainer>
+            <ProjectContainer reference="personal-website/">
+                <Image
+                    loading="eager"
+                    slot="image"
+                    src={personalWebsiteImg}
+                    class="max-h-56 w-fit rounded-md"
+                    alt="Personal website"
+                />
+                <h3 slot="title">Personal Website</h3>
+                <p slot="description">
+                    The website you're currently viewing! Just a simple,
+                    minimalistic website to give viewers more information about
+                    me and show off some of my projects that I do during my time
+                    at school and on the side.
+                </p>
+            </ProjectContainer>
+            <ProjectContainer reference="calculator/">
+                <Image
+                    loading="eager"
+                    slot="image"
+                    src={odinCalculatorImg}
+                    class="max-h-56 w-fit rounded-md"
+                    alt="Calculator main page"
+                />
+                <h3 slot="title">Calculator</h3>
+                <p slot="description">
+                    A simple calculator website, done while doing parts of the
+                    Odin Project. Supports basic some intermediate math
+                    operations.
+                </p>
+            </ProjectContainer>
+            <ProjectContainer reference="chat-system/">
+                <Image
+                    loading="eager"
+                    slot="image"
+                    src={chatSystemImg}
+                    class="max-h-56 max-w-24 rounded-md"
+                    alt="Main screen of Chat System app"
+                />
+                <h3 slot="title">Chat System</h3>
+                <p slot="description">
+                    A school project for my advanced mobile development class.
+                    Users can register and log in, search up their other people
+                    by their usernames, and begin chatting in real time.
+                </p>
+            </ProjectContainer>
+            <ProjectContainer reference="cacatua/">
+                <Image
+                    loading="eager"
+                    slot="image"
+                    src={cacatuaImg}
+                    class="max-h-56 w-fit rounded-md"
+                    alt="Main screen of Cacatua application"
+                />
+                <h3 slot="title">Cacatua</h3>
+                <p slot="description">
+                    A capstone project for my managing software projects class.
+                    It is an open source
+                    <cite>Discord</cite>-like desktop application, geared
+                    towards project management.
+                </p>
+            </ProjectContainer>
+        </div>
+    </section>
 </Layout>

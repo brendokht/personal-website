@@ -1,68 +1,85 @@
 ---
 import { Image } from "astro:assets";
-import personalWebsiteImg from "../images/personal-website.png";
-import cacatuaImg from "../images/cacatua.png";
-import chatSystemImg from "../images/chat-system.png";
-import Layout from "../layouts/Layout.astro";
+import SkillTag from "../components/SkillTag.astro";
 import ProjectContainer from "../components/ProjectContainer.astro";
+import Layout from "../layouts/Layout.astro";
+import cacatuaImg from "../images/cacatua.png";
 ---
 
-<Layout title="Hey, I'm Brenden Kohut" tabTitle="Home">
-  <p class="px-4 text-center text-lg md:text-xl">
-    A Full-stack Developer dedicated to building scalable and high-quality
-    applications that drive results.
-  </p>
-  <section class="my-8 flex w-full grow flex-col items-center justify-start">
-    <h2 class="pb-14 text-center text-4xl font-semibold">Notable Projects</h2>
-    <div
-      class="flex flex-wrap items-center justify-evenly gap-8 px-8 md:flex-row lg:gap-16"
-    >
-      <ProjectContainer reference="projects/chat-system/">
-        <Image
-          loading="eager"
-          slot="image"
-          src={chatSystemImg}
-          class="max-h-56 max-w-24 rounded-md"
-          alt="Main screen of Chat System app"
-        />
-        <h3 slot="title">Chat System</h3>
-        <p slot="description">
-          A school project for my advanced mobile development class. Users can
-          register and log in, search up their other people by their usernames,
-          and begin chatting in real time.
+<Layout>
+    <section id="hero" class="flex h-[36rem] flex-col justify-center gap-4">
+        <h1>
+            <span class="text-2xl font-medium">Hey, I'm</span><br /><span
+                class="text-4xl font-bold">Brenden Kohut</span
+            >
+        </h1>
+        <p class="text-xl font-semibold">Full-Stack Developer</p>
+        <p>
+            Recent graduate of Fanshawe College, committed to building high
+            quality and scalable applications
         </p>
-      </ProjectContainer>
-      <ProjectContainer reference="projects/cacatua/">
-        <Image
-          loading="eager"
-          slot="image"
-          src={cacatuaImg}
-          class="max-h-56 w-fit rounded-md"
-          alt="Main screen of Cacatua application"
-        />
-        <h3 slot="title">Cacatua</h3>
-        <p slot="description">
-          A capstone project for my managing software projects class. It is an
-          open source
-          <cite>Discord</cite>-like desktop application, geared towards project
-          management.
-        </p>
-      </ProjectContainer>
-      <ProjectContainer reference="projects/personal-website/">
-        <Image
-          loading="eager"
-          slot="image"
-          src={personalWebsiteImg}
-          class="max-h-56 w-fit rounded-md"
-          alt="Personal website"
-        />
-        <h3 slot="title">Personal Website</h3>
-        <p slot="description">
-          The website you're currently viewing! Just a simple, minimalistic
-          website to give viewers more information about me and show off some of
-          my projects that I do during my time at school and on the side.
-        </p>
-      </ProjectContainer>
-    </div>
-  </section>
+    </section>
+    <section id="about" class="flex flex-col gap-8">
+        <h1 class="text-center text-4xl font-bold">About</h1>
+        <section id="story" class="flex flex-col gap-4">
+            <h2 class="text-center text-xl font-semibold">Story</h2>
+            <p class="text-sm">
+                Hey! I'm Brenden Kohut, a Software Developer based in London,
+                Ontario. I am a new grad out of Fanshawe College's Computer
+                Programming and Analysis program. I specialize in Full-stack
+                Development with ASP.NET Core and React, but I am also
+                comfortable on various other technologies and am always willing
+                to learn more.
+            </p>
+            <p class="text-sm">
+                I am always looking for new oppotunities and connections, and am
+                currently looking for a entry level position, so feel free to
+                reach out and connect with me if you like what you see!
+            </p>
+        </section>
+        <section id="tools-and-technologies" class="flex flex-col gap-4">
+            <h2 class="text-center text-xl font-semibold">
+                Tools and Technologies
+            </h2>
+            <section id="main" class="flex flex-col gap-4">
+                <div class="flex flex-col items-center">
+                    <h3 class="text-center font-semibold">Main</h3>
+                    <p class="w-2/3 text-center text-xs font-semibold">
+                        The stack I typically use
+                    </p>
+                </div>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <SkillTag>ASP.NET Core</SkillTag>
+                    <SkillTag>C#</SkillTag>
+                    <SkillTag>React</SkillTag>
+                    <SkillTag>TypeScript</SkillTag>
+                    <SkillTag>Docker</SkillTag>
+                    <SkillTag>MS SQL</SkillTag>
+                </div>
+            </section>
+            <section id="other" class="flex flex-wrap justify-center gap-4">
+                <div class="flex flex-col items-center">
+                    <h3 class="text-center font-semibold">Other</h3>
+                    <p class="w-2/3 text-center text-xs font-semibold">
+                        Some other tools that I have used before or am currently
+                        using
+                    </p>
+                </div>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <SkillTag>Next.js</SkillTag>
+                    <SkillTag>Astro</SkillTag>
+                    <SkillTag>Express</SkillTag>
+                    <SkillTag>Fastify</SkillTag>
+                    <SkillTag>C++</SkillTag>
+                    <SkillTag>Java</SkillTag>
+                    <SkillTag>Spring Boot</SkillTag>
+                    <SkillTag>Angular</SkillTag>
+                    <SkillTag>Vue.js</SkillTag>
+                    <SkillTag>PostgreSQL</SkillTag>
+                </div>
+            </section>
+        </section>
+    </section>
+    <section id="projects" class="flex flex-col items-center gap-8"></section>
+    <section id="contact" class="flex flex-col items-center gap-8"></section>
 </Layout>

@@ -93,7 +93,7 @@ import NavItem from "./NavItem.astro";
 <div
     class="navbar-menu-mobile invisible absolute z-20 mt-12 mb-5 w-full bg-white drop-shadow-lg dark:bg-black"
 >
-    <ul>
+    <ul class="drop-shadow-lg">
         <MobileNavItem href="/" text="Home" />
         <MobileNavItem href="/#about" text="About" />
         <MobileNavItem href="/#projects" text="Projects" />
@@ -149,6 +149,7 @@ import NavItem from "./NavItem.astro";
         function toggleMobileMenu() {
             if (burger && mobileMenu && close) {
                 mobileMenu.classList.toggle("invisible");
+                mobileMenu.classList.toggle("drop-shadow-lg");
                 burger.classList.toggle("hidden");
                 burger.classList.toggle("inline-flex");
                 close.classList.toggle("hidden");

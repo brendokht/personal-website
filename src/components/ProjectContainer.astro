@@ -3,27 +3,27 @@ const { reference, workInProgress } = Astro.props;
 ---
 
 <a
-    href={reference}
-    class="min-h-max rounded-md bg-white shadow-xl shadow-[#616188] transition-transform duration-300 ease-in-out hover:scale-105 dark:bg-black dark:shadow-[#4c3f61]"
+  href={reference}
+  class="min-h-max rounded-md bg-white shadow-xl shadow-[#616188] transition-transform duration-300 ease-in-out hover:scale-105 dark:bg-black dark:shadow-[#4c3f61]"
 >
-    <section class="flex min-h-72 w-72 cursor-pointer flex-col rounded-md p-2">
-        <div
-            class="flex w-full justify-center rounded-md bg-neutral-100 p-2 dark:bg-neutral-900"
-        >
-            <slot name="image" />
+  <section class="flex min-h-72 w-72 cursor-pointer flex-col rounded-md p-2">
+    <div
+      class="flex w-full justify-center rounded-md bg-neutral-100 p-2 dark:bg-neutral-900"
+    >
+      <slot name="image" />
+    </div>
+    <div class="w-full p-2 py-1 text-lg font-semibold">
+      <slot name="title" />
+    </div>
+    {
+      workInProgress && (
+        <div class="text-neutral- w-full p-2 py-1 text-xs font-light text-neutral-700 dark:text-neutral-300">
+          Work in Progress
         </div>
-        <div class="w-full p-2 py-1 text-lg font-semibold">
-            <slot name="title" />
-        </div>
-        {
-            workInProgress && (
-                <div class="text-neutral- w-full p-2 py-1 text-xs font-light text-neutral-700 dark:text-neutral-300">
-                    Work in Progress
-                </div>
-            )
-        }
-        <div class="w-full grow p-2 text-sm">
-            <slot name="description" />
-        </div>
-    </section>
+      )
+    }
+    <div class="w-full grow p-2 text-sm">
+      <slot name="description" />
+    </div>
+  </section>
 </a>

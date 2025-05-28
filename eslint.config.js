@@ -11,6 +11,7 @@ export default [
       "astro/no-set-html-directive": "error",
       "astro/no-set-text-directive": "error",
       "astro/no-unused-css-selector": "error",
+      "no-console": "error",
     },
     ignores: ["dist/**", "node_modules/**", "*.d.ts"],
   },

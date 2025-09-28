@@ -1,19 +1,9 @@
 ---
 import Layout from "./Layout.astro";
-import Title from "../components/Title.astro";
 
 const { frontmatter } = Astro.props;
 ---
 
 <Layout title={frontmatter.title}>
-  <Title title={frontmatter.title} />
-  <section
-    class="mb-8 flex w-full grow flex-col items-center justify-start px-4 text-xl"
-  >
-    <div
-      class="prose dark:prose-invert prose-orange flex flex-col justify-start"
-    >
-      <slot />
-    </div>
-  </section>
+  <slot />
 </Layout>

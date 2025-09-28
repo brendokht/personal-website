@@ -1,0 +1,124 @@
+---
+layout: ../layouts/MarkdownLayout.astro
+title: Home
+---
+
+import { Image } from "astro:assets";
+import SkillTag from "../components/SkillTag.astro";
+import ProjectContainer from "../components/ProjectContainer.astro";
+import Layout from "../layouts/Layout.astro";
+import cacatuaImg from "../images/cacatua.png";
+import championsGgHomeImg from "../images/champions-gg-home.png";
+import templateCompanySiteImg from "../images/template-company-website.png";
+import CallToAction from "../components/CallToAction.astro";
+import ContactForm from "../components/ContactForm.astro";
+
+<div
+  class="flex min-h-[calc(100vh-56px)] flex-col justify-center xl:min-h-screen"
+>
+  <h1>
+    <span>Hey, I'm</span>
+    <br />
+    <span>Brenden Kohut</span>
+  </h1>
+
+Fullstack Developer
+
+    Recent graduate from Fanshawe College. Committed to building high quality
+    fullstack applications.
+
+<a class="mt-20 flex justify-center transition-transform duration-200 hover:scale-125 hover:cursor-pointer">
+  <svg
+    class="fill-black dark:fill-white"
+    xmlns="http://www.w3.org/2000/svg"
+    height="24px"
+    viewBox="0 -960 960 960"
+    width="24px"
+  >
+    <path d="M440-800v487L216-537l-56 57 320 320 320-320-56-57-224 224v-487h-80Z"></path>
+  </svg>
+</a>
+
+</div>
+  ## About
+  
+  <section id="story" class="flex flex-col gap-4">
+      Hey! I'm Brenden Kohut, a fullstack developer based in London, Ontario. I
+      am a new graduate out of Fanshawe College's Computer Programming and
+      Analysis program. I specialize in fullstack development, but I do love to
+      take on all sorts of challenges
+
+      I am always looking for new oppotunities and connections, and I am
+      currently looking for a junior level position. Feel free to reach out and
+      connect with me if you like what you see!
+
+  </section>
+
+### Tools and Technologies
+
+#### My Stack
+
+<div class="flex flex-wrap justify-center gap-4">
+  <SkillTag>Express</SkillTag>
+  <SkillTag>Next.js</SkillTag>
+  <SkillTag>TypeScript</SkillTag>
+  <SkillTag>PostgreSQL</SkillTag>
+</div>
+
+#### Additional Tools
+
+<div class="flex flex-wrap justify-center gap-4">
+  <SkillTag>Docker</SkillTag>
+  <SkillTag>ASP.NET Core</SkillTag>
+  <SkillTag>C#</SkillTag>
+  <SkillTag>Astro</SkillTag>
+  <SkillTag>NestJS</SkillTag>
+  <SkillTag>Fastify</SkillTag>
+  <SkillTag>Java</SkillTag>
+  <SkillTag>Spring Boot</SkillTag>
+  <SkillTag>Angular</SkillTag>
+  <SkillTag>Vue.js</SkillTag>
+</div>
+
+## Projects
+
+<div class="my-8 flex flex-wrap gap-8">
+  <ProjectContainer
+    title="Cacatua"
+    description="A capstone project for my Managing Software Projects class. It is an
+        open source Discord like desktop application, geared towards project
+        management."
+    reference="cacatua/"
+    imageSrc={cacatuaImg}
+    imageAlt="Main screen of Cacatua application"
+    eager={true}
+  />
+  <ProjectContainer
+    title="Champions GG"
+    description="A personal project for Esports event management. Users can create
+        teams, host leagues, tournaments and other events for multiple game
+        titles."
+    reference="champions-gg/"
+    imageSrc={championsGgHomeImg}
+    imageAlt="Home page of Champions GG website"
+    eager={true}
+  />
+  <ProjectContainer
+    title="Template Company Website"
+    description="An open source personal project that anyone can build off of. It
+        contains a few templated pages, a blog using Sanity and a contact form
+        which can be made functional."
+    reference="template-company-website/"
+    imageSrc={templateCompanySiteImg}
+    imageAlt="Home page of template company website"
+    eager={true}
+  />
+</div>
+
+<CallToAction reference="projects/" text="More Projects" />
+
+## Contact
+
+Feel free to use this form to contact me!
+
+<ContactForm />

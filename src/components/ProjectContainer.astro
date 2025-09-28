@@ -1,5 +1,15 @@
 ---
-const { reference, workInProgress } = Astro.props;
+import { Image } from "astro:assets";
+
+const {
+  reference,
+  title,
+  imageSrc,
+  imageAlt,
+  eager,
+  description,
+  workInProgress,
+} = Astro.props;
 ---
 
 <a
@@ -10,10 +20,17 @@ const { reference, workInProgress } = Astro.props;
     <div
       class="flex w-full justify-center rounded-md bg-neutral-100 p-2 dark:bg-neutral-900"
     >
-      <slot name="image" />
+      <Image
+        loading={eager ? "eager" : "lazy"}
+        src={imageSrc}
+        class="max-h-56 w-fit rounded-md"
+        alt={imageAlt}
+      />
     </div>
     <div class="w-full p-2 py-1 text-lg font-semibold">
-      <slot name="title" />
+      <p>
+        {title}
+      </p>
     </div>
     {
       workInProgress && (
@@ -23,7 +40,7 @@ const { reference, workInProgress } = Astro.props;
       )
     }
     <div class="w-full grow p-2 text-sm">
-      <slot name="description" />
+      <p>{description}</p>
     </div>
   </section>
 </a>

@@ -13,6 +13,7 @@ import chatSystemImg from "../images/chat-system.png";
 import templateCompanySiteImg from "../images/template-company-website.png";
 import CallToAction from "../components/CallToAction.astro";
 import ContactForm from "../components/ContactForm.astro";
+import { ArrowDown } from "@lucide/astro";
 
 <div
   class="flex min-h-[calc(100vh-56px)] flex-col justify-center xl:min-h-screen"
@@ -28,16 +29,11 @@ Fullstack Developer
     Recent graduate from Fanshawe College. Committed to building high quality
     fullstack applications.
 
-<a class="mt-20 flex justify-center transition-transform duration-200 hover:scale-97 hover:cursor-pointer">
-  <svg
-    class="fill-black dark:fill-white"
-    xmlns="http://www.w3.org/2000/svg"
-    height="24px"
-    viewBox="0 -960 960 960"
-    width="24px"
-  >
-    <path d="M440-800v487L216-537l-56 57 320 320 320-320-56-57-224 224v-487h-80Z"></path>
-  </svg>
+<a
+  href="#about"
+  class="mt-20 flex justify-center transition-transform duration-200 hover:scale-90 hover:cursor-pointer"
+>
+  <ArrowDown />
 </a>
 
 </div>
@@ -83,7 +79,7 @@ Fullstack Developer
 
 ## Projects
 
-<div class="my-8 flex flex-wrap gap-8">
+<div class="my-8 flex flex-wrap justify-center gap-8 md:justify-start">
   <ProjectContainer
     title="Ascnd GG"
     description="A competitve Esports service, for hosting and competing in Esports events. Users can create

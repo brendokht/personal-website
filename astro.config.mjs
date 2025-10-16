@@ -1,9 +1,7 @@
-import { defineConfig } from "astro/config";
+import { defineConfig, fontProviders } from "astro/config";
 import tailwindcss from "@tailwindcss/vite";
 import mdx from "@astrojs/mdx";
 import netlify from "@astrojs/netlify";
-
-/* TODO: Update fonts to Astro fonts API */
 
 // https://astro.build/config
 export default defineConfig({
@@ -17,4 +15,24 @@ export default defineConfig({
   adapter: netlify(),
   site: "https://brendenkohut.com",
   trailingSlash: "always",
+  experimental: {
+    fonts: [
+      {
+        provider: fontProviders.google(),
+        name: "Geist",
+        cssVariable: "--font-geist",
+        weights: [300, 400, 500, 600, 700, 800, 900],
+        styles: ["italic", "normal", "oblique"],
+        fallbacks: ["sans"],
+      },
+      {
+        provider: fontProviders.google(),
+        name: "Geist Mono",
+        cssVariable: "--font-geist-mono",
+        weights: [300, 400, 500, 600, 700, 800, 900],
+        styles: ["italic", "normal", "oblique"],
+        fallbacks: ["mono"],
+      },
+    ],
+  },
 });

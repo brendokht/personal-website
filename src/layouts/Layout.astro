@@ -2,6 +2,7 @@
 import Navbar from "../components/Navbar.astro";
 import Footer from "../components/Footer.astro";
 import "../styles/global.css";
+import { Font } from "astro:assets";
 
 const { title } = Astro.props;
 ---
@@ -16,6 +17,8 @@ const { title } = Astro.props;
       content="Personal website for Brenden Kohut, a full-stack developer based in Ontario, Canada."
     />
     <meta name="generator" content={Astro.generator} />
+    <Font cssVariable="--font-geist" preload />
+    <Font cssVariable="--font-geist-mono" preload />
     <title>{title ? `Brenden Kohut - ${title}` : "Brenden Kohut"}</title>
   </head>
   <body

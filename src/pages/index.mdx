@@ -9,6 +9,7 @@ import ProjectContainer from "../components/ProjectContainer.astro";
 import Layout from "../layouts/Layout.astro";
 import cacatuaImg from "../images/cacatua.png";
 import ascndGGSignInImg from "../images/ascnd-gg-sign-in.png";
+import chatSystemImg from "../images/chat-system.png";
 import templateCompanySiteImg from "../images/template-company-website.png";
 import CallToAction from "../components/CallToAction.astro";
 import ContactForm from "../components/ContactForm.astro";
@@ -27,7 +28,7 @@ Fullstack Developer
     Recent graduate from Fanshawe College. Committed to building high quality
     fullstack applications.
 
-<a class="mt-20 flex justify-center transition-transform duration-200 hover:scale-125 hover:cursor-pointer">
+<a class="mt-20 flex justify-center transition-transform duration-200 hover:scale-97 hover:cursor-pointer">
   <svg
     class="fill-black dark:fill-white"
     xmlns="http://www.w3.org/2000/svg"
@@ -59,7 +60,7 @@ Fullstack Developer
 #### My Stack
 
 <div class="flex flex-wrap justify-center gap-4">
-  <SkillTag>Express</SkillTag>
+  <SkillTag>NestJS</SkillTag>
   <SkillTag>Next.js</SkillTag>
   <SkillTag>TypeScript</SkillTag>
   <SkillTag>PostgreSQL</SkillTag>
@@ -72,7 +73,7 @@ Fullstack Developer
   <SkillTag>ASP.NET Core</SkillTag>
   <SkillTag>C#</SkillTag>
   <SkillTag>Astro</SkillTag>
-  <SkillTag>NestJS</SkillTag>
+  <SkillTag>Express</SkillTag>
   <SkillTag>Fastify</SkillTag>
   <SkillTag>Java</SkillTag>
   <SkillTag>Spring Boot</SkillTag>
@@ -84,30 +85,41 @@ Fullstack Developer
 
 <div class="my-8 flex flex-wrap gap-8">
   <ProjectContainer
-    title="Cacatua"
-    description="A capstone project for my Managing Software Projects class. It is an
-        open source Discord like desktop application, geared towards project
-        management."
-    reference="/projects/cacatua/"
-    imageSrc={cacatuaImg}
-    imageAlt="Main screen of Cacatua application"
-    eager={true}
-  />
-  <ProjectContainer
     title="Ascnd GG"
     description="A competitve Esports service, for hosting and competing in Esports events. Users can create
         teams, host leagues, tournaments and other events for multiple game
         titles."
+    workInProgress
     reference="/projects/ascnd-gg/"
     imageSrc={ascndGGSignInImg}
     imageAlt="Home page of Ascnd GG website"
     eager={true}
   />
   <ProjectContainer
+    title="Chat System"
+    description="A school project for my advanced mobile development class. Users can
+      register and log in, search up their other people by their usernames,
+      and begin chatting in real time."
+    reference="/projects/chat-system/"
+    imageSrc={chatSystemImg}
+    imageAlt="Main screen of Chat System app"
+    eager={true}
+  />
+  <ProjectContainer
+    title="Cacatua"
+    description="A capstone project for my Managing Software Projects class. It is an
+      open source Discord like desktop application, geared towards project
+      management."
+    reference="/projects/cacatua/"
+    imageSrc={cacatuaImg}
+    imageAlt="Main screen of Cacatua application"
+    eager={true}
+  />
+  <ProjectContainer
     title="Template Company Website"
     description="An open source personal project that anyone can build off of. It
-        contains a few templated pages, a blog using Sanity and a contact form
-        which can be made functional."
+      contains a few templated pages, a blog using Sanity and a contact form
+      which can be made functional."
     reference="/projects/template-company-website/"
     imageSrc={templateCompanySiteImg}
     imageAlt="Home page of template company website"
@@ -115,7 +127,7 @@ Fullstack Developer
   />
 </div>
 
-<CallToAction reference="projects/" text="More Projects" />
+<CallToAction reference="/projects/" text="More Projects" />
 
 ## Contact
 

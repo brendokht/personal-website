@@ -2,6 +2,7 @@
 import Navbar from "../components/Navbar.astro";
 import Footer from "../components/Footer.astro";
 import "../styles/global.css";
+import { Font } from "astro:assets";
 
 const { title } = Astro.props;
 ---
@@ -16,17 +17,19 @@ const { title } = Astro.props;
       content="Personal website for Brenden Kohut, a full-stack developer based in Ontario, Canada."
     />
     <meta name="generator" content={Astro.generator} />
+    <Font cssVariable="--font-geist" preload />
+    <Font cssVariable="--font-geist-mono" preload />
     <title>{title ? `Brenden Kohut - ${title}` : "Brenden Kohut"}</title>
   </head>
   <body
-    class="flex min-h-screen flex-col bg-linear-to-br from-[#9796f0] to-[#fbc7d4] text-black dark:from-[#0f0c29] dark:via-[#302b63] dark:to-[#24243e] dark:text-white"
+    class="flex flex-col bg-linear-to-br from-[#9796f0] to-[#fbc7d4] text-black dark:from-[#0f0c29] dark:via-[#302b63] dark:to-[#24243e] dark:text-white"
   >
     <Navbar />
-    <main class="flex min-h-screen grow flex-col items-center px-4 pt-16">
-      <div class="flex min-h-screen flex-col gap-20 md:w-[768px]">
+    <div class="container flex justify-center">
+      <main class="prose dark:prose-invert">
         <slot />
-      </div>
-    </main>
+      </main>
+    </div>
     <Footer />
   </body>
 </html>

@@ -3,32 +3,16 @@
 
 @custom-variant dark (&:is(.dark *));
 
-/*
-  The default border color has changed to `currentColor` in Tailwind CSS v4,
-  so we've added these compatibility styles to make sure everything still
-  looks the same as it did with Tailwind CSS v3.
-
-  If we ever want to remove these styles, we need to add an explicit border
-  color utility to any element that depends on these defaults.
-*/
-@layer base {
-  *,
-  ::after,
-  ::before,
-  ::backdrop,
-  ::file-selector-button {
-    border-color: var(--color-gray-200, currentColor);
+@utility container {
+  margin-inline: auto;
+  padding-inline: 2rem;
+  padding-block: 2rem;
+  @media (width >= 1400px) {
+    max-width: 1400px;
   }
 }
 
-@font-face {
-  font-family: "Geist Mono";
-  font-style: normal;
-  font-weight: 100 900;
-  font-display: swap;
-  src: url("/fonts/GeistMono-VariableFont_wght.ttf") format("truetype");
-}
-
-@theme {
-  --default-font-family: "Geist Mono", "sans-serif";
+@theme inline {
+  --font-sans: var(--font-geist);
+  --font-mono: var(--font-geist-mono);
 }

@@ -1,21 +1,14 @@
 ---
+import { ArrowRight } from "@lucide/astro";
 const { reference, text } = Astro.props;
 ---
 
 <a
   href={reference}
-  class="flex h-12 min-w-20 items-center justify-center gap-2 rounded-lg bg-gradient-to-br from-[#f46b45] to-[#eea849] px-4 py-2 transition-transform duration-200 ease-in-out hover:scale-110 hover:cursor-pointer"
+  class="flex h-12 min-w-20 items-center justify-center gap-2 rounded-lg bg-gradient-to-br from-[#f46b45] to-[#eea849] px-4 py-2 transition-transform duration-200 ease-in-out hover:scale-99 hover:cursor-pointer"
 >
   <div>
     {text}
   </div>
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    height="24px"
-    viewBox="0 -960 960 960"
-    width="24px"
-    class="fill-black dark:fill-white"
-    ><path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"
-    ></path></svg
-  >
+  <ArrowRight />
 </a>

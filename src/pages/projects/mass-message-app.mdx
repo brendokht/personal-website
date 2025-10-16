@@ -1,10 +1,11 @@
 ---
 layout: ../../layouts/MarkdownLayout.astro
 title: Mass Message App
-webTitle: Mass Message App
 ---
 
 import SkillTag from "../../components/SkillTag.astro";
+
+# {frontmatter.title}
 
 ## Summary
 
@@ -28,7 +29,14 @@ please.
   <SkillTag>Firebase</SkillTag>
 </div>
 
-<div class="mt-8">
-  !["Mass message app emailing screen"](../../images/mass-message-app.png "Mass
-  Message App")
+## Images
+
+<div class="grid">
+  <div>
+    ### Home Screen
+    <div>
+      !["Mass message app emailing screen"](../../images/mass-message-app.png
+      "Mass Message App")
+    </div>
+  </div>
 </div>

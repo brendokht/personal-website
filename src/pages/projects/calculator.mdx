@@ -1,10 +1,11 @@
 ---
 layout: ../../layouts/MarkdownLayout.astro
 title: Calculator
-webTitle: Calculator
 ---
 
 import SkillTag from "../../components/SkillTag.astro";
+
+# {frontmatter.title}
 
 ## Summary
 
@@ -20,8 +21,15 @@ It is a simple Calculator that can do basic math, with a few more intermediate f
   <SkillTag>JavaScript</SkillTag>
 </div>
 
-<div class="mt-8">
-  !["Calculator home page"](../../images/odin-calculator.png "Calculator")
+## Images
+
+<div class="grid">
+  <div>
+    ### Home Screen
+    <div>
+      !["Calculator home page"](../../images/odin-calculator.png "Calculator")
+    </div>
+  </div>
 </div>
 
 ## Check it out

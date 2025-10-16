@@ -1,19 +1,36 @@
 ---
-const { reference, workInProgress } = Astro.props;
+import { Image } from "astro:assets";
+
+const {
+  reference,
+  title,
+  imageSrc,
+  imageAlt,
+  eager,
+  description,
+  workInProgress,
+} = Astro.props;
 ---
 
 <a
   href={reference}
-  class="min-h-max rounded-md bg-white shadow-xl shadow-[#616188] transition-transform duration-300 ease-in-out hover:scale-105 dark:bg-black dark:shadow-[#4c3f61]"
+  class="rounded-md bg-white shadow-xl shadow-[#616188] transition-transform duration-200 ease-in-out hover:scale-97 dark:bg-black dark:shadow-[#4c3f61]"
 >
-  <section class="flex min-h-72 w-72 cursor-pointer flex-col rounded-md p-2">
+  <section class="flex h-full w-72 cursor-pointer flex-col rounded-md p-2">
     <div
       class="flex w-full justify-center rounded-md bg-neutral-100 p-2 dark:bg-neutral-900"
     >
-      <slot name="image" />
+      <Image
+        loading={eager ? "eager" : "lazy"}
+        src={imageSrc}
+        class="max-h-56 w-fit rounded-md"
+        alt={imageAlt}
+      />
     </div>
     <div class="w-full p-2 py-1 text-lg font-semibold">
-      <slot name="title" />
+      <p>
+        {title}
+      </p>
     </div>
     {
       workInProgress && (
@@ -23,7 +40,7 @@ const { reference, workInProgress } = Astro.props;
       )
     }
     <div class="w-full grow p-2 text-sm">
-      <slot name="description" />
+      <p>{description}</p>
     </div>
   </section>
 </a>

@@ -1,38 +1,20 @@
 ---
 
-
-
-import Footer from "../components/Footer.astro";
-import Navbar from "../components/Navbar.astro";
 import "../styles/global.css";
-import { Font } from "astro:assets";
-
-const { title } = Astro.props;
 ---
 
-<html lang="en" id="top" class="scroll-smooth bg-black">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Personal website for Brenden Kohut, a full-stack developer based in Ontario, Canada."
-    />
     <meta name="generator" content={Astro.generator} />
-    <Font cssVariable="--font-geist" preload />
-    <Font cssVariable="--font-geist-mono" preload />
-    <title>{title ? `Brenden Kohut - ${title}` : "Brenden Kohut"}</title>
   </head>
   <body
-    class="flex flex-col bg-linear-to-br from-[#9796f0] to-[#fbc7d4] text-black dark:from-[#0f0c29] dark:via-[#302b63] dark:to-[#24243e] dark:text-white"
+    class="flex flex-col"
   >
-    <Navbar />
-    <div class="container flex justify-center">
-      <main class="prose dark:prose-invert">
+      <main>
         <slot />
       </main>
-    </div>
-    <Footer />
   </body>
 </html>

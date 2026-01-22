@@ -1,7 +1,10 @@
 ---
+
+
+
+import { Menu, Moon, Sun, X } from "@lucide/astro";
 import MobileNavItem from "./MobileNavItem.astro";
 import NavItem from "./NavItem.astro";
-import { Sun, Moon, Menu, X } from "@lucide/astro";
 ---
 
 <!-- Medium screen navbar -->
@@ -73,7 +76,7 @@ import { Sun, Moon, Menu, X } from "@lucide/astro";
 </div>
 
 <script>
-  document.addEventListener("DOMContentLoaded", function () {
+  document.addEventListener("DOMContentLoaded", () => {
     // eslint-disable-next-line no-console
     console.log(`
 Hey there!
@@ -106,11 +109,11 @@ __/       /
     }
 
     if (nav && burger && mobileMenu && close) {
-      burger.addEventListener("click", function () {
+      burger.addEventListener("click", () => {
         toggleMobileMenu();
       });
 
-      close.addEventListener("click", function () {
+      close.addEventListener("click", () => {
         toggleMobileMenu();
       });
 
@@ -127,7 +130,7 @@ __/       /
 
       if (mobileMenuListItems) {
         mobileMenuListItems.forEach((li) => {
-          li.addEventListener("click", function () {
+          li.addEventListener("click", () => {
             toggleMobileMenu();
           });
         });

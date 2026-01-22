@@ -1,7 +1,7 @@
 {
-  "name": "personal-website-v2",
+  "name": "personal-website",
   "type": "module",
-  "version": "0.0.1",
+  "version": "3.0.0",
   "scripts": {
     "dev": "astro dev --host",
     "start": "astro dev",
@@ -15,19 +15,18 @@
     "prepare": "husky"
   },
   "dependencies": {
-    "@astrojs/mdx": "^4.3.6",
-    "@lucide/astro": "^0.545.0",
-    "@tailwindcss/typography": "^0.5.16",
+    "@astrojs/mdx": "^4.3.13",
+    "@lucide/astro": "^0.562.0",
+    "@tailwindcss/typography": "^0.5.19",
     "@tailwindcss/vite": "^4.1.18",
-    "astro": "^5.14.1",
-    "personal-website-v2": "file:",
+    "astro": "^5.16.14",
     "tailwindcss": "^4.1.18"
   },
   "devDependencies": {
     "@biomejs/biome": "2.3.11",
     "@types/bun": "latest",
     "husky": "^9.1.7",
-    "lint-staged": "^16.1.0"
+    "lint-staged": "^16.2.7"
   },
   "lint-staged": {
     "*.{js,ts,jsx,tsx,astro}": ["bash -c 'tsc --noEmit'"],
@@ -37,6 +36,6 @@
   },
   "private": true,
   "peerDependencies": {
-    "typescript": "^5"
+    "typescript": "^5.9.3"
   }
 }

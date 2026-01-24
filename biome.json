@@ -24,6 +24,7 @@
   },
   "javascript": {
     "formatter": {
+      "enabled": true,
       "jsxQuoteStyle": "double",
       "quoteProperties": "asNeeded",
       "trailingCommas": "all",
@@ -33,12 +34,16 @@
     }
   },
   "css": {
-    "formatter": { "quoteStyle": "double" },
+    "formatter": {
+      "enabled": true,
+      "quoteStyle": "double"
+    },
     "parser": { "tailwindDirectives": true }
   },
   "html": {
     "experimentalFullSupportEnabled": true,
     "formatter": {
+      "enabled": true,
       "indentScriptAndStyle": true,
       "selfCloseVoidElements": "always"
     }
@@ -46,6 +51,9 @@
   "assist": {
     "enabled": true,
     "actions": {
+      "source": {
+        "organizeImports": "off"
+      },
       "recommended": true
     }
   },

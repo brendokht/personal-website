@@ -1,0 +1,75 @@
+---
+import AscndGGImage from "../images/ascnd-gg-sign-in.png";
+import Button from "../components/Button.astro";
+import CacatuaImage from "../images/cacatua.png";
+import ChatSystemImage from "../images/chat-system.png";
+import Layout from "../layouts/Layout.astro";
+import ProjectCard from "../components/ProjectCard.astro";
+import TemplateWebsiteImage from "../images/template-company-website.png";
+import type { ProjectType } from "../types/project-type";
+
+const projects: ProjectType[] = [
+  {
+    title: "Ascnd GG",
+    description:
+      "Competitive Esports platform for hosting and competing in events.",
+    image: AscndGGImage,
+  },
+  {
+    title: "Chat System",
+    description: "Realtime messaging Android application.",
+    image: ChatSystemImage,
+  },
+  {
+    title: "Cacatua",
+    description:
+      "Open-source project management and communication application.",
+    image: CacatuaImage,
+  },
+  {
+    title: "Template Company Website",
+    description: "Templated Astro website with Sanity integrated.",
+    image: TemplateWebsiteImage,
+  },
+];
+---
+
+<Layout>
+  <section id="hero" class="flex justify-center my-32">
+    <div class="flex flex-col gap-4 max-w-xl">
+      <h1 class="text-4xl font-extrabold">Hey I'm Brenden Kohut</h1>
+      <p>Software Developer</p>
+      <p>
+        Junior Developer based in Ontario, Canada, committed to learning and
+        building high quality software.
+      </p>
+      <Button href="/about/">More About Me</Button>
+    </div>
+  </section>
+
+  <section
+    id="projects-highlights"
+    class="prose dark:prose-invert md:max-w-none max-w-xl flex flex-col"
+  >
+    <h1>Projects</h1>
+    <div class="grid md:grid-cols-2 grid-cols-1 gap-4 mb-4">
+      {projects.map((project) => 
+        <ProjectCard 
+          title={project.title} 
+          description={project.description} 
+          image={project.image} 
+        />)}
+    </div>
+    <Button href="/projects/">View More</Button>
+  </section>
+
+  <section id="contact-cta" class="prose dark:prose-invert flex flex-col">
+    <h1>Contact</h1>
+    <p>
+      If you like what you see and want to contact me, feel free to go to the
+      <a href="/contact/">contact</a> page to get in touch. Thanks for viewing
+      my portfolio!
+    </p>
+    <a href="#header">Back to top</a>
+  </section>
+</Layout>

@@ -1,6 +1,7 @@
 ---
-
 import "../styles/global.css";
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
 ---
 
 <html lang="en">
@@ -9,12 +10,13 @@ import "../styles/global.css";
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width initial-scale=1.0" />
     <meta name="generator" content={Astro.generator} />
+    <title>Brenden Kohut | Software Developer</title>
   </head>
-  <body
-    class="flex flex-col"
-  >
-      <main>
-        <slot />
-      </main>
+  <body class="flex flex-col max-w-4xl mx-auto">
+    <Header />
+    <main class="flex flex-col items-center">
+      <slot />
+    </main>
+    <Footer />
   </body>
 </html>

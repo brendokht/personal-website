@@ -51,6 +51,9 @@
   "assist": {
     "enabled": true,
     "actions": {
+      "source": {
+        "organizeImports": "off"
+      },
       "recommended": true
     }
   },

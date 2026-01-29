@@ -6,9 +6,9 @@ import ChatSystemImage from "../images/chat-system.png";
 import Layout from "../layouts/Layout.astro";
 import ProjectCard from "../components/ProjectCard.astro";
 import TemplateWebsiteImage from "../images/template-company-website.png";
-import type { ProjectType } from "../types/project-type";
+import type { ProjectType } from "../types";
 
-const projects: ProjectType[] = [
+const projects: Array<ProjectType> = [
   {
     title: "Ascnd GG",
     description:
@@ -35,7 +35,7 @@ const projects: ProjectType[] = [
 ---
 
 <Layout>
-  <section id="hero" class="flex justify-center my-32">
+  <section id="hero" class="not-prose flex justify-center my-32">
     <div class="flex flex-col gap-4 max-w-xl">
       <h1 class="text-4xl font-extrabold">Hey I'm Brenden Kohut</h1>
       <p>Software Developer</p>
@@ -49,7 +49,7 @@ const projects: ProjectType[] = [
 
   <section
     id="projects-highlights"
-    class="prose dark:prose-invert md:max-w-none max-w-xl flex flex-col"
+    class="md:max-w-none max-w-xl flex flex-col"
   >
     <h1>Projects</h1>
     <div class="grid md:grid-cols-2 grid-cols-1 gap-4 mb-4">
@@ -63,7 +63,7 @@ const projects: ProjectType[] = [
     <Button href="/projects/">View More</Button>
   </section>
 
-  <section id="contact-cta" class="prose dark:prose-invert flex flex-col">
+  <section id="contact-cta" class="flex flex-col">
     <h1>Contact</h1>
     <p>
       If you like what you see and want to contact me, feel free to go to the

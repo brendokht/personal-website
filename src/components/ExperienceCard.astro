@@ -1,0 +1,24 @@
+---
+import type { ExperienceType } from "../types/experience-type";
+
+interface Props extends ExperienceType {}
+
+const { company, position, description, from, to } = Astro.props;
+
+const options: Intl.DateTimeFormatOptions = {
+  year: "numeric",
+  month: "long",
+};
+
+const fromStr = from.toLocaleDateString("en-US", options);
+const toStr = to ? to.toLocaleDateString("en-US", options) : "Present";
+---
+
+<article class="not-prose bg-muted p-3 rounded-lg flex flex-col gap-4">
+  <div class="flex justify-between flex-col md:flex-row gap-2">
+    <h3 class="text-xl font-bold">{position}</h3>
+    <p class="text-muted-foreground text-sm">{fromStr} - {toStr}</p>
+  </div>
+  <p class="font-semibold">{company}</p>
+  <p class="text-sm">{description}</p>
+</article>

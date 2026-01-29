@@ -1,0 +1,93 @@
+---
+import ExperienceCard from "../components/ExperienceCard.astro";
+import Tag from "../components/Tag.astro";
+import Layout from "../layouts/Layout.astro";
+import type { ExperienceType } from "../types";
+
+const experience: Array<ExperienceType> = [
+  {
+    company: "Infostructure Technology",
+    position: "Application Developer Co-op",
+    description:
+      "Developed and maintained a customer-facing daycare management application, serving daycares and Montessori schools across Canada.",
+    from: new Date(2024, 4, 6),
+    to: new Date(2024, 7, 30),
+  },
+  {
+    company: "Freelancer",
+    position: "Web Developer",
+    description:
+      "Develop and optimize fast, responsive, and high-ranking websites for businesses in Ontario",
+    from: new Date(2025, 7, 1),
+    to: null,
+  },
+].sort((a, b) => {
+  const dateA = a.to?.getTime() ?? Infinity;
+  const dateB = b.to?.getTime() ?? Infinity;
+
+  return dateB - dateA || 0;
+});
+
+const toolsAndTech: Array<string> = [
+  "TypeScript",
+  "C#",
+  "Java",
+  "React",
+  "Astro",
+  "Electron",
+  "Next.js",
+  "NestJS",
+  "Express",
+  "Fastify",
+  "ASP.NET Core",
+  "MSSQL",
+  "Postgres",
+  "Docker",
+  "Git",
+];
+---
+
+<Layout>
+  <section id="about">
+    <h1>About</h1>
+    <p>
+      Hey! I&apos;m Brenden Kohut, a software developer based in Ontario,
+      Canada. I graduated out of Fanshawe College&apos;s Computer Programming
+      and Analysis program in December of 2024.
+    </p>
+    <p>
+      I am always looking for new oppotunities and connections, and I am
+      currently looking for a junior level position.
+    </p>
+    <p>
+      Feel free to reach out and connect with me <a href="/contact/">here</a> if
+      you want to get in touch.
+    </p>
+  </section>
+  <section id="experience">
+    <h1>Experience</h1>
+    <div class="flex flex-col gap-4 mb-4">
+      {experience.map((experience) => 
+        <div class="flex">
+          <div class="flex">
+            <div class="w-1 border-r border-r-muted -mb-4"/>
+            <div class="relative size-4 rounded-md bg-muted top-4 right-2"/>
+          </div>
+          <ExperienceCard 
+            company={experience.company} 
+            position={experience.position} 
+            description={experience.description} 
+            from={experience.from} 
+            to={experience.to} 
+          />
+        </div>
+      )}
+    </div>
+  </section>
+  <section id="tools-and-tech">
+    <h1>Tools and Tech</h1>
+    <div class="grid grid-cols-3 gap-2">
+      {toolsAndTech.map((tt) => <Tag text={tt}/>)}
+    </div>
+  </section>
+</Layout>

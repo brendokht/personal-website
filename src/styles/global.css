@@ -7,16 +7,19 @@
   --background: white;
   --foreground: black;
   --muted: var(--color-neutral-300);
+  --muted-foreground: var(--color-neutral-200);
 }
 
 .dark {
   --background: var(--color-neutral-800);
   --foreground: white;
   --muted: var(--color-neutral-700);
+  --muted-foreground: var(--color-neutral-400);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
 }

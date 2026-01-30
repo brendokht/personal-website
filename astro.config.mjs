@@ -13,4 +13,7 @@ export default defineConfig({
   integrations: [mdx()],
   site: "https://brendenkohut.com",
   trailingSlash: "always",
+  image: {
+    remotePatterns: [{ hostname: "placehold.co", protocol: "https" }],
+  },
 });

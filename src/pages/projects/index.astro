@@ -1,0 +1,71 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import CalculatorImage from "../../images/calculator.png";
+import MassMsgAppImage from "../../images/mass-message-app.png";
+import CacatuaImage from "../../images/cacatua.png";
+import ChatSystemImage from "../../images/chat-system.png";
+import AscndGGImage from "../../images/ascnd-gg-sign-in.png";
+import TemplateWebsiteImage from "../../images/template-company-website.png";
+import type { ProjectType } from "../../types";
+import ProjectCard from "../../components/ProjectCard.astro";
+
+const projects: Array<ProjectType> = [
+  {
+    title: "Ascnd GG",
+    description:
+      "Competitive Esports platform for hosting and competing in events.",
+    image: AscndGGImage,
+  },
+  {
+    title: "Cacatua",
+    description:
+      "Open-source project management and communication application.",
+    image: CacatuaImage,
+  },
+  {
+    title: "Chat System",
+    description: "Realtime messaging Android application.",
+    image: ChatSystemImage,
+  },
+  {
+    title: "Mass Message App",
+    description:
+      "An Android app to send one message to multiple people individuallyz.",
+    image: MassMsgAppImage,
+  },
+  {
+    title: "Template Company Website",
+    description: "Templated Astro website with Sanity integrated.",
+    image: TemplateWebsiteImage,
+  },
+  {
+    title: "Calculator",
+    description: "Simple web calculator, a project from The Odin Project.",
+    image: CalculatorImage,
+  },
+  {
+    title: "Personal Website",
+    description: "The website you are currently viewing!",
+    // TOOD: Snap quick image of finished website
+  },
+];
+---
+
+<Layout>
+  <section id="projects">
+    <h1>Projects</h1>
+    <p>
+      This is a collection of some personal and school projects I have done
+      throughout my time coding. Some may be a work in progress, or the code
+      cannot be viewed.
+    </p>
+    <div class="grid md:grid-cols-2 grid-cols-1 gap-4 mb-4">
+      {projects.map((project) => 
+        <ProjectCard 
+          title={project.title} 
+          description={project.description} 
+          image={project.image} 
+        />)}
+    </div>
+  </section>
+</Layout>

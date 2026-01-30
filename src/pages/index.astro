@@ -8,7 +8,7 @@ import ProjectCard from "../components/ProjectCard.astro";
 import TemplateWebsiteImage from "../images/template-company-website.png";
 import type { ProjectType } from "../types";
 
-const projects: Array<ProjectType> = [
+const featuredProjects: Array<ProjectType> = [
   {
     title: "Ascnd GG",
     description:
@@ -51,9 +51,9 @@ const projects: Array<ProjectType> = [
     id="projects-highlights"
     class="md:max-w-none max-w-xl flex flex-col"
   >
-    <h1>Projects</h1>
+    <h1>Featured Projects</h1>
     <div class="grid md:grid-cols-2 grid-cols-1 gap-4 mb-4">
-      {projects.map((project) => 
+      {featuredProjects.map((project) => 
         <ProjectCard 
           title={project.title} 
           description={project.description} 

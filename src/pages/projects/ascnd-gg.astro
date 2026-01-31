@@ -1,0 +1,59 @@
+---
+import Button from "../../components/Button.astro";
+import Tag from "../../components/Tag.astro";
+import Layout from "../../layouts/Layout.astro";
+
+const techStack: Array<string> = [
+  "TypeScript",
+  "Next.js",
+  "NestJS",
+  "Tailwind CSS",
+  "Zod",
+  "better-auth",
+  "shadcn/ui",
+  "Postgres",
+  "S3",
+  "Prisma",
+  "Turborepo",
+  "Docker",
+  "Redis",
+];
+
+const githubLink = "https://github.com/brendokht/ascnd-gg";
+---
+
+<Layout>
+  <h1>Ascnd GG</h1>
+  <section id="summary">
+    <h2>Summary</h2>
+    <p>
+      Ascnd GG is a personal passion project that I am creating to allow for
+      people to host and compete in Esport events without the hassle and
+      difficulty.
+    </p>
+    <p>
+      During my time at Fanshawe College, I played for the Fanshawe Fuel, the
+      Fanshawe Student Union’s Esports team. I had the opportunity to use
+      various platforms and from my own experience and other's opinions, none of
+      them had all of the features that a lot of players and staff wanted. This
+      included things such as advanced player statistics, integrated banning
+      system for maps, and more.
+    </p>
+
+    <p>
+      I hope to create a simple, modernized to use application that will include
+      all of the features that these players and staff want, all while being
+      easy and stress-free to use.
+    </p>
+  </section>
+  <section id="tech-stack">
+    <h2>Tech Stack</h2>
+    <div class="grid grid-cols-3 md:grid-cols-5 gap-2 md:gap-6">
+      {techStack.map((tt) => <Tag text={tt}/>)}
+    </div>
+  </section>
+  <section id="cta">
+    <h2>Source Code</h2>
+    <p>The source code is available on GitHub <a href={githubLink}>here</a>.</p>
+  </section>
+</Layout>

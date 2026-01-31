@@ -4,11 +4,11 @@ import type { ProjectType } from "../types";
 
 interface Props extends ProjectType {}
 
-const { title, description, image } = Astro.props;
+const { title, description, href, image } = Astro.props;
 ---
 
 <a
-  href="#"
+  href={href}
   class="not-prose bg-neutral-100 dark:bg-neutral-950 p-3 rounded-lg flex flex-col gap-2 hover:scale-99 transition-transform duration-300"
 >
   <div class="overflow-hidden rounded-md bg-neutral-800">

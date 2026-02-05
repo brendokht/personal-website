@@ -1,0 +1,38 @@
+---
+import Tag from "../../components/Tag.astro";
+import Layout from "../../layouts/Layout.astro";
+
+const techStack: Array<string> = [
+  "Astro",
+  "Sanity",
+  "React",
+  "Bun",
+  "Netlify",
+  "Tailwind CSS",
+];
+
+const githubLink = "https://github.com/brendokht/template-company-website";
+---
+
+<Layout>
+  <h1>Template Company Website</h1>
+  <section id="summary">
+    <h2>Summary</h2>
+    <p>
+      Template Company Website is a template Astro website with Sanity
+      integrated. This was mainly a simple demo to step in the direction of
+      freelancing, using it to learn how to integrate a Sanity blog into an
+      Astro website.
+    </p>
+  </section>
+  <section id="tech-stack">
+    <h2>Tech Stack</h2>
+    <div class="grid grid-cols-3 md:grid-cols-5 gap-2 md:gap-6">
+      {techStack.map((tt) => <Tag text={tt}/>)}
+    </div>
+  </section>
+  <section id="cta">
+    <h2>Source Code</h2>
+    <p>The source code is available on GitHub <a href={githubLink}>here</a>.</p>
+  </section>
+</Layout>

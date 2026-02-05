@@ -1,0 +1,35 @@
+---
+import Tag from "../../components/Tag.astro";
+import Layout from "../../layouts/Layout.astro";
+
+const techStack: Array<string> = ["Kotlin", "Firebase", "Android Studio"];
+
+const githubLink = "https://github.com/brendokht/ChatSystem";
+---
+
+<Layout>
+  <h1>Chat System</h1>
+  <section id="summary">
+    <h2>Summary</h2>
+    <p>
+      Chat System was the final project for my Advanced Mobile Development
+      class. It is a simple Android application where you can create an account,
+      add your friends, and message them in real time.
+    </p>
+    <p>
+      This was a group project where we were required to incorporate concepts
+      learned throughout the span of the class, such as MVVM, coroutines,
+      Firebase, etc.
+    </p>
+  </section>
+  <section id="tech-stack">
+    <h2>Tech Stack</h2>
+    <div class="grid grid-cols-3 md:grid-cols-5 gap-2 md:gap-6">
+      {techStack.map((tt) => <Tag text={tt}/>)}
+    </div>
+  </section>
+  <section id="cta">
+    <h2>Source Code</h2>
+    <p>The source code is available on GitHub <a href={githubLink}>here</a>.</p>
+  </section>
+</Layout>

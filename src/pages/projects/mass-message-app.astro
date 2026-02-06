@@ -1,0 +1,41 @@
+---
+import Tag from "../../components/Tag.astro";
+import Layout from "../../layouts/Layout.astro";
+
+const techStack: Array<string> = [
+  "JavaScript",
+  "React Native",
+  "Expo",
+  "Firebase",
+];
+
+const githubLink = "https://github.com/brendokht/mass-message-app";
+---
+
+<Layout>
+  <h1>Mass Message App</h1>
+  <section id="summary">
+    <h2>Summary</h2>
+    <p>
+      Mass Message App is an application where you can send out one message to
+      any of their contacts separately. Users can sign up, import their
+      contacts, and send messages through text or email without needin to add
+      them to a group chat.
+    </p>
+    <p>
+      This app uses various Expo SDKs, such as Contacts, MailComposer, SMS, and
+      more. It stores any signed up users to Firebase for storage, and is cross
+      platform via React Native.
+    </p>
+  </section>
+  <section id="tech-stack">
+    <h2>Tech Stack</h2>
+    <div class="grid grid-cols-3 md:grid-cols-5 gap-2 md:gap-6">
+      {techStack.map((tt) => <Tag text={tt}/>)}
+    </div>
+  </section>
+  <section id="cta">
+    <h2>Source Code</h2>
+    <p>The source code is available on GitHub <a href={githubLink}>here</a>.</p>
+  </section>
+</Layout>

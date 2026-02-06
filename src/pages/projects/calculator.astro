@@ -1,0 +1,30 @@
+---
+import Tag from "../../components/Tag.astro";
+import Layout from "../../layouts/Layout.astro";
+
+const techStack: Array<string> = ["HTML", "CSS", "JavaScript"];
+
+const githubLink = "https://github.com/brendokht/odin-calculator";
+---
+
+<Layout>
+  <h1>Mass Message App</h1>
+  <section id="summary">
+    <h2>Summary</h2>
+    <p>
+      Odin Calculator is a simple web calculator made with plain HTML, CSS and
+      JS. It is a project a part of The Odin Project. It is simply a calculator
+      with some basic functionality.
+    </p>
+  </section>
+  <section id="tech-stack">
+    <h2>Tech Stack</h2>
+    <div class="grid grid-cols-3 md:grid-cols-5 gap-2 md:gap-6">
+      {techStack.map((tt) => <Tag text={tt}/>)}
+    </div>
+  </section>
+  <section id="cta">
+    <h2>Source Code</h2>
+    <p>The source code is available on GitHub <a href={githubLink}>here</a>.</p>
+  </section>
+</Layout>

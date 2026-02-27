@@ -1,6 +1,7 @@
 ---
 import ExperienceCard from "../components/ExperienceCard.astro";
 import Tag from "../components/Tag.astro";
+import TagContainer from "../components/TagContainer.astro";
 import Layout from "../layouts/Layout.astro";
 import type { ExperienceType } from "../types";
 
@@ -86,8 +87,6 @@ const toolsAndTech: Array<string> = [
   </section>
   <section id="tools-and-tech">
     <h1>Tools and Tech</h1>
-    <div class="grid grid-cols-3 gap-2">
-      {toolsAndTech.map((tt) => <Tag text={tt}/>)}
-    </div>
+    <TagContainer tags={toolsAndTech.map(t => ({ text: t }))} />
   </section>
 </Layout>

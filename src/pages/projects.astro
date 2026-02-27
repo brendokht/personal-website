@@ -1,14 +1,15 @@
 ---
-import AscndGGImage from "../images/ascnd-gg-sign-in.png";
-import Button from "../components/Button.astro";
+import Layout from "../layouts/Layout.astro";
+import CalculatorImage from "../images/calculator.png";
+import MassMsgAppImage from "../images/mass-message-app.png";
 import CacatuaImage from "../images/cacatua.png";
 import ChatSystemImage from "../images/chat-system.png";
-import Layout from "../layouts/Layout.astro";
-import ProjectCard from "../components/ProjectCard.astro";
+import AscndGGImage from "../images/ascnd-gg-sign-in.png";
 import TemplateWebsiteImage from "../images/template-company-website.png";
 import type { ProjectType } from "../types";
+import ProjectCard from "../components/ProjectCard.astro";
 
-const featuredProjects: Array<ProjectType> = [
+const projects: Array<ProjectType> = [
   {
     title: "Ascnd GG",
     description:
@@ -35,29 +36,38 @@ const featuredProjects: Array<ProjectType> = [
     href: "/projects/template-company-website/",
     image: TemplateWebsiteImage,
   },
+  {
+    title: "Mass Message App",
+    description:
+      "An Android app to send one message to multiple people individuallyz.",
+    href: "/projects/mass-message-app/",
+    image: MassMsgAppImage,
+  },
+  {
+    title: "Calculator",
+    description: "Simple web calculator, a project from The Odin Project.",
+    href: "/projects/calculator/",
+    image: CalculatorImage,
+  },
+  {
+    title: "Personal Website",
+    description: "The website you are currently viewing!",
+    href: "/projects/personal-website/",
+    // TOOD: Snap quick image of finished website
+  },
 ];
 ---
 
 <Layout>
-  <section id="hero" class="not-prose flex justify-center my-32">
-    <div class="flex flex-col gap-4 max-w-xl">
-      <h1 class="text-4xl font-extrabold">Hey I'm Brenden Kohut</h1>
-      <p>Software Developer</p>
-      <p>
-        Junior Developer based in Ontario, Canada, committed to learning and
-        building high quality software.
-      </p>
-      <Button href="/about/">More About Me</Button>
-    </div>
-  </section>
-
-  <section
-    id="projects-highlights"
-    class="md:max-w-none max-w-xl flex flex-col"
-  >
-    <h1>Featured Projects</h1>
+  <section id="projects">
+    <h1>Projects</h1>
+    <p>
+      This is a collection of some personal and school projects I have done
+      throughout my time coding. Some may be a work in progress, or the code
+      cannot be viewed.
+    </p>
     <div class="grid md:grid-cols-2 grid-cols-1 gap-4 mb-4">
-      {featuredProjects.map((project) => 
+      {projects.map((project) => 
         <ProjectCard 
           title={project.title} 
           description={project.description} 
@@ -65,16 +75,5 @@ const featuredProjects: Array<ProjectType> = [
           image={project.image} 
         />)}
     </div>
-    <Button href="/projects/">View More</Button>
-  </section>
-
-  <section id="contact-cta" class="flex flex-col">
-    <h1>Contact</h1>
-    <p>
-      If you like what you see and want to contact me, feel free to go to the
-      <a href="/contact/">contact</a> page to get in touch. Thanks for viewing
-      my portfolio!
-    </p>
-    <a href="#header">Back to top</a>
   </section>
 </Layout>

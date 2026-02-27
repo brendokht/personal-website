@@ -1,0 +1,57 @@
+---
+import TagContainer from "../../components/TagContainer.astro";
+import Layout from "../../layouts/Layout.astro";
+import { Image } from "astro:assets";
+import CacatuaImage from "../../images/cacatua.png";
+
+const techStack: Array<string> = [
+  "TypeScript",
+  "C#",
+  "Electron",
+  "React",
+  "React Router",
+  "Tailwind CSS",
+  "shadcn/ui",
+  "ASP.NET Core",
+  "Firebase",
+];
+
+const githubLink = "https://github.com/brendokht/cacatua";
+---
+
+<Layout>
+  <h1>Cacatua</h1>
+  <section id="summary">
+    <h2>Summary</h2>
+    <p>
+      Cacatua was a capstone project for my Managing Software Projects class. It
+      is a desktop application for project management, combining team
+      communication and project management tools into one.
+    </p>
+    <p>
+      This was a group project where we had to come up with a unique idea for a
+      project, and create a Vision Document for it, brainstorming things like
+      features, target market, competitors, and more. We had to incorporate
+      Agile methodologies while we created the project, in the form of sprints
+      with tasks and sub-tasks.
+    </p>
+  </section>
+  <section id="tech-stack">
+    <h2>Tech Stack</h2>
+    <TagContainer tags={techStack.map(t => ({ text: t }))} />
+  </section>
+  <section id="images">
+    <h2>Images</h2>
+    <h3>Preview</h3>
+    <Image
+      src={CacatuaImage}
+      alt={"Cacatua"}
+      layout="fixed"
+      class="w-full aspect-video object-contain"
+    />
+  </section>
+  <section id="cta">
+    <h2>Source Code</h2>
+    <p>The source code is available on GitHub <a href={githubLink}>here</a>.</p>
+  </section>
+</Layout>

@@ -1,6 +1,11 @@
 ---
-import Tag from "../../components/Tag.astro";
+import TagContainer from "../../components/TagContainer.astro";
 import Layout from "../../layouts/Layout.astro";
+import { Image } from "astro:assets";
+import AboutPageImage from "../../images/template-company-website-about.png";
+import BlogPageImage from "../../images/template-company-website-blog.png";
+import SolutionsPageImage from "../../images/template-company-website-solutions.png";
+import ContactPageImage from "../../images/template-company-website-contact.png";
 
 const techStack: Array<string> = [
   "Astro",
@@ -27,9 +32,38 @@ const githubLink = "https://github.com/brendokht/template-company-website";
   </section>
   <section id="tech-stack">
     <h2>Tech Stack</h2>
-    <div class="grid grid-cols-3 md:grid-cols-5 gap-2 md:gap-6">
-      {techStack.map((tt) => <Tag text={tt}/>)}
-    </div>
+    <TagContainer tags={techStack.map(t => ({ text: t }))} />
+  </section>
+  <section id="images">
+    <h2>Images</h2>
+    <h3>About Page</h3>
+    <Image
+      src={AboutPageImage}
+      alt={"Template Company Website About Page"}
+      layout="fixed"
+      class="w-full aspect-video object-contain"
+    />
+    <h3>Blog Page</h3>
+    <Image
+      src={BlogPageImage}
+      alt={"Template Company Website Blog Page"}
+      layout="fixed"
+      class="w-full aspect-video object-contain"
+    />
+    <h3>Solutions Page</h3>
+    <Image
+      src={SolutionsPageImage}
+      alt={"Template Company Website Solutions Page"}
+      layout="fixed"
+      class="w-full aspect-video object-contain"
+    />
+    <h3>Contact Page</h3>
+    <Image
+      src={ContactPageImage}
+      alt={"Template Company Website Contact Page"}
+      layout="fixed"
+      class="w-full aspect-video object-contain"
+    />
   </section>
   <section id="cta">
     <h2>Source Code</h2>

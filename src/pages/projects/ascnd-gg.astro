@@ -1,6 +1,8 @@
 ---
-import Tag from "../../components/Tag.astro";
+import TagContainer from "../../components/TagContainer.astro";
 import Layout from "../../layouts/Layout.astro";
+import { Image } from "astro:assets";
+import AscndGgSignInImage from "../../images/ascnd-gg-sign-in.png";
 
 const techStack: Array<string> = [
   "TypeScript",
@@ -47,9 +49,17 @@ const githubLink = "https://github.com/brendokht/ascnd-gg";
   </section>
   <section id="tech-stack">
     <h2>Tech Stack</h2>
-    <div class="grid grid-cols-3 md:grid-cols-5 gap-2 md:gap-6">
-      {techStack.map((tt) => <Tag text={tt}/>)}
-    </div>
+    <TagContainer tags={techStack.map(t => ({ text: t }))} />
+  </section>
+  <section id="images">
+    <h2>Images</h2>
+    <h3>Sign In Page</h3>
+    <Image
+      src={AscndGgSignInImage}
+      alt={"Ascnd GG Sign In Page"}
+      layout="fixed"
+      class="w-full aspect-video object-contain"
+    />
   </section>
   <section id="cta">
     <h2>Source Code</h2>

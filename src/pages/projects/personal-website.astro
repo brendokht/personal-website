@@ -1,5 +1,5 @@
 ---
-import Tag from "../../components/Tag.astro";
+import TagContainer from "../../components/TagContainer.astro";
 import Layout from "../../layouts/Layout.astro";
 
 const techStack: Array<string> = [
@@ -26,9 +26,7 @@ const githubLink = "https://github.com/brendokht/personal-website";
   </section>
   <section id="tech-stack">
     <h2>Tech Stack</h2>
-    <div class="grid grid-cols-3 md:grid-cols-5 gap-2 md:gap-6">
-      {techStack.map((tt) => <Tag text={tt}/>)}
-    </div>
+    <TagContainer tags={techStack.map(t => ({ text: t }))} />
   </section>
   <section id="cta">
     <h2>Source Code</h2>

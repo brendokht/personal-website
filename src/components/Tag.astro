@@ -6,6 +6,8 @@ interface Props extends TagType {}
 const { text } = Astro.props;
 ---
 
-<article class="not-prose bg-muted p-3 rounded-lg w-32">
-  <p class="text-sm text-center">{text}</p>
+<article
+  class="not-prose bg-muted p-2 rounded-lg min-w-24 h-full flex items-center justify-center"
+>
+  <p class="text-sm text-center leading-tight">{text}</p>
 </article>

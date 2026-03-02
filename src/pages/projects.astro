@@ -16,6 +16,7 @@ const projects: Array<ProjectType> = [
       "Competitive Esports platform for hosting and competing in events.",
     href: "/projects/ascnd-gg/",
     image: AscndGGImage,
+    imageEager: true,
   },
   {
     title: "Cacatua",
@@ -23,18 +24,21 @@ const projects: Array<ProjectType> = [
       "Open-source project management and communication application.",
     href: "/projects/cacatua/",
     image: CacatuaImage,
+    imageEager: true,
   },
   {
     title: "Chat System",
     description: "Realtime messaging Android application.",
     href: "/projects/chat-system/",
     image: ChatSystemImage,
+    imageEager: true,
   },
   {
     title: "Template Company Website",
     description: "Templated Astro website with Sanity integrated.",
     href: "/projects/template-company-website/",
     image: TemplateWebsiteImage,
+    imageEager: true,
   },
   {
     title: "Mass Message App",
@@ -42,17 +46,20 @@ const projects: Array<ProjectType> = [
       "An Android app to send one message to multiple people individuallyz.",
     href: "/projects/mass-message-app/",
     image: MassMsgAppImage,
+    imageEager: true,
   },
   {
     title: "Calculator",
     description: "Simple web calculator, a project from The Odin Project.",
     href: "/projects/calculator/",
     image: CalculatorImage,
+    imageEager: true,
   },
   {
     title: "Personal Website",
     description: "The website you are currently viewing!",
     href: "/projects/personal-website/",
+    imageEager: false,
     // TOOD: Snap quick image of finished website
   },
 ];
@@ -73,6 +80,7 @@ const projects: Array<ProjectType> = [
           description={project.description} 
           href={project.href}
           image={project.image} 
+          imageEager={project.imageEager} 
         />)}
     </div>
   </section>

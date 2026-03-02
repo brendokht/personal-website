@@ -15,6 +15,7 @@ const featuredProjects: Array<ProjectType> = [
       "Competitive Esports platform for hosting and competing in events.",
     href: "/projects/ascnd-gg/",
     image: AscndGGImage,
+    imageEager: true,
   },
   {
     title: "Cacatua",
@@ -22,18 +23,21 @@ const featuredProjects: Array<ProjectType> = [
       "Open-source project management and communication application.",
     href: "/projects/cacatua/",
     image: CacatuaImage,
+    imageEager: true,
   },
   {
     title: "Chat System",
     description: "Realtime messaging Android application.",
     href: "/projects/chat-system/",
     image: ChatSystemImage,
+    imageEager: true,
   },
   {
     title: "Template Company Website",
     description: "Templated Astro website with Sanity integrated.",
     href: "/projects/template-company-website/",
     image: TemplateWebsiteImage,
+    imageEager: true,
   },
 ];
 ---
@@ -63,6 +67,7 @@ const featuredProjects: Array<ProjectType> = [
             description={project.description}
             href={project.href}
             image={project.image}
+            imageEager={project.imageEager}
         />)}
     </div>
     <LinkButton href="/projects/">View More</LinkButton>

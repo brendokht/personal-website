@@ -1,4 +1,6 @@
 ---
+import Layout from "../layouts/Layout.astro";
+import ContactForm from "../components/ContactForm.astro";
 import GithubSvg from "../svgs/github.svg";
 import LinkedInSvg from "../svgs/linkedin.svg";
 import XSvg from "../svgs/x.svg";
@@ -8,11 +10,15 @@ const xLink = "https://x.com/brendokht";
 const linkedInLink = "https://linkedin.com/in/brendenkohut";
 ---
 
-<footer id="footer" class="py-8 bg-muted/25 -mx-4 px-4 md:mx-0">
-  <div class="flex justify-between max-w-3xl mx-auto">
-    <h1 class="text-xl font-semibold"><a href="/">BK</a></h1>
+<Layout>
+  <section>
+    <h1>Contact</h1>
+    <p>
+      If you would like to get in touch, feel free to contact me via these
+      platforms.
+    </p>
     <div>
-      <ul class="flex gap-16">
+      <ul class="list-none flex md:gap-32 p-0 gap-16">
         <li>
           <a href={githubLink} aria-label="GitHub profile"
             ><GithubSvg
@@ -42,5 +48,6 @@ const linkedInLink = "https://linkedin.com/in/brendenkohut";
         </li>
       </ul>
     </div>
-  </div>
-</footer>
+  </section>
+  <ContactForm />
+</Layout>

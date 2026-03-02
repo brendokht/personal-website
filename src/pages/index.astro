@@ -1,6 +1,6 @@
 ---
 import AscndGGImage from "../images/ascnd-gg-sign-in.png";
-import Button from "../components/Button.astro";
+import LinkButton from "../components/LinkButton.astro";
 import CacatuaImage from "../images/cacatua.png";
 import ChatSystemImage from "../images/chat-system.png";
 import Layout from "../layouts/Layout.astro";
@@ -15,6 +15,7 @@ const featuredProjects: Array<ProjectType> = [
       "Competitive Esports platform for hosting and competing in events.",
     href: "/projects/ascnd-gg/",
     image: AscndGGImage,
+    imageEager: true,
   },
   {
     title: "Cacatua",
@@ -22,18 +23,21 @@ const featuredProjects: Array<ProjectType> = [
       "Open-source project management and communication application.",
     href: "/projects/cacatua/",
     image: CacatuaImage,
+    imageEager: true,
   },
   {
     title: "Chat System",
     description: "Realtime messaging Android application.",
     href: "/projects/chat-system/",
     image: ChatSystemImage,
+    imageEager: true,
   },
   {
     title: "Template Company Website",
     description: "Templated Astro website with Sanity integrated.",
     href: "/projects/template-company-website/",
     image: TemplateWebsiteImage,
+    imageEager: true,
   },
 ];
 ---
@@ -47,7 +51,7 @@ const featuredProjects: Array<ProjectType> = [
         Junior Developer based in Ontario, Canada, committed to learning and
         building high quality software.
       </p>
-      <Button href="/about/">More About Me</Button>
+      <LinkButton href="/about/">More About Me</LinkButton>
     </div>
   </section>
 
@@ -58,22 +62,23 @@ const featuredProjects: Array<ProjectType> = [
     <h1>Featured Projects</h1>
     <div class="grid md:grid-cols-2 grid-cols-1 gap-4 mb-4">
       {featuredProjects.map((project) => 
-        <ProjectCard 
-          title={project.title} 
-          description={project.description} 
-          href={project.href}
-          image={project.image} 
+          <ProjectCard
+            title={project.title}
+            description={project.description}
+            href={project.href}
+            image={project.image}
+            imageEager={project.imageEager}
         />)}
     </div>
-    <Button href="/projects/">View More</Button>
+    <LinkButton href="/projects/">View More</LinkButton>
   </section>
 
   <section id="contact-cta" class="flex flex-col">
     <h1>Contact</h1>
     <p>
       If you like what you see and want to contact me, feel free to go to the
-      <a href="/contact/">contact</a> page to get in touch. Thanks for viewing
-      my portfolio!
+      <a href="/contact/">contact</a>
+      page to get in touch. Thanks for viewing my portfolio!
     </p>
     <a href="#header">Back to top</a>
   </section>

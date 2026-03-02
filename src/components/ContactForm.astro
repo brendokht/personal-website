@@ -1,0 +1,55 @@
+---
+---
+
+<form
+  name="contact"
+  action="/success/"
+  method="POST"
+  data-netlify-recaptcha="true"
+  data-netlify="true"
+  class="flex min-h-fit border-2 border-neutral-600  not-prose flex-col justify-evenly gap-2 rounded-lg bg-white px-8 py-6 dark:bg-neutral-700"
+>
+  <h2 class="text-lg md:text-2xl font-semibold my-2">
+    Or send me a message through this form <br />
+    and I can reach out to you
+  </h2>
+  <div class="hidden">
+    <label>
+      Don’t fill this out if you’re human: <input name="bot-field" />
+    </label>
+  </div>
+  <div class="flex md:gap-4 justify-between md:flex-row flex-col gap-2">
+    <input
+      class="my-2 h-6 w-full rounded-md px-2 py-4 dark:bg-neutral-800 dark:text-white"
+      type="text"
+      required
+      autocomplete="name"
+      id="name"
+      name="name"
+      placeholder="Name"
+    />
+    <input
+      class="my-2 h-6 w-full rounded-md px-2 py-4 dark:bg-neutral-800 dark:text-white"
+      type="email"
+      required
+      autocomplete="email"
+      id="email"
+      name="email"
+      placeholder="Email"
+    />
+  </div>
+  <textarea
+    class="my-2 h-6 min-h-48 rounded-md px-2 max-h-144 py-2 dark:bg-neutral-800 dark:text-white"
+    id="message"
+    name="message"
+    required
+    placeholder="Message"
+  ></textarea>
+  <div data-netlify-recaptcha="true"></div>
+  <button
+    class="w-fit rounded-lg bg-indigo-950 px-20 py-1 hover:cursor-pointer transition duration-200 hover:scale-99"
+    type="submit"
+  >
+    Submit
+  </button>
+</form>

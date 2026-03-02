@@ -4,7 +4,7 @@ import type { ProjectType } from "../types";
 
 interface Props extends ProjectType {}
 
-const { title, description, href, image } = Astro.props;
+const { title, description, href, image, imageEager } = Astro.props;
 ---
 
 <a
@@ -16,6 +16,7 @@ const { title, description, href, image } = Astro.props;
       src={image ?? {format: "png", height: 398, width: 704, src: "https://placehold.co/704x396/png?text=PLACEHOLDER&font=Roboto" }}
       alt={title}
       layout="fixed"
+      loading={imageEager ? "eager" : "lazy"}
       class="w-full aspect-video object-contain"
     />
   </div>

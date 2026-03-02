@@ -3,4 +3,5 @@ export type ProjectType = {
   description: string;
   href: string;
   image?: ImageMetadata;
+  imageEager?: boolean;
 };

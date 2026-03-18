@@ -8,39 +8,37 @@ const xLink = "https://x.com/brendokht";
 const linkedInLink = "https://linkedin.com/in/brendenkohut";
 ---
 
-<footer id="footer" class="py-8 bg-muted/25 -mx-4 px-4 md:mx-0">
+<footer id="footer" class="py-8 bg-muted -mx-4 px-4 md:mx-0">
   <div class="flex justify-between max-w-3xl mx-auto">
     <h1 class="text-xl font-semibold"><a href="/">BK</a></h1>
-    <div>
-      <ul class="flex gap-16">
-        <li>
-          <a href={githubLink} aria-label="GitHub profile"
-            ><GithubSvg
-              width={48}
-              height={48}
-              class="*:fill-black! *:dark:fill-white! hover:scale-95 transition-transform duration-300"
-            /></a
-          >
-        </li>
-        <li>
-          <a href={linkedInLink} aria-label="LinkedIn profile"
-            ><LinkedInSvg
-              width={48}
-              height={48}
-              class="hover:scale-95 transition-transform duration-300"
-            /></a
-          >
-        </li>
-        <li>
-          <a href={xLink} aria-label="X (formerly Twitter) profile"
-            ><XSvg
-              width={48}
-              height={48}
-              class="*:fill-black! *:dark:fill-white! hover:scale-95 transition-transform duration-300"
-            /></a
-          >
-        </li>
-      </ul>
-    </div>
+    <ul class="flex gap-16 md:gap-32">
+      <li>
+        <a href={githubLink} aria-label="GitHub profile"
+          ><GithubSvg
+            width={32}
+            height={32}
+            class="*:fill-black! *:dark:fill-white! hover:scale-95 transition-transform duration-300"
+          /></a
+        >
+      </li>
+      <li>
+        <a href={linkedInLink} aria-label="LinkedIn profile"
+          ><LinkedInSvg
+            width={32}
+            height={32}
+            class="hover:scale-95 transition-transform duration-300"
+          /></a
+        >
+      </li>
+      <li>
+        <a href={xLink} aria-label="X (formerly Twitter) profile"
+          ><XSvg
+            width={32}
+            height={32}
+            class="*:fill-black! *:dark:fill-white! hover:scale-95 transition-transform duration-300"
+          /></a
+        >
+      </li>
+    </ul>
   </div>
 </footer>

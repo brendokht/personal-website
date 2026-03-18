@@ -9,35 +9,24 @@ document.addEventListener("DOMContentLoaded", () => {
   ).matches;
 
   const toggleMenu = ({ open }: { open?: boolean }) => {
-    if (open) {
-      mobileMenuBackdrop.classList.toggle("opacity-0");
-      mobileMenu.animate(
-        [{ transform: `translateX(-${window.innerWidth}px)` }],
+    mobileMenu.animate(
+      [
         {
-          duration: userPrefersReducedMotion ? 0 : 300,
-          fill: "forwards",
-          easing: "ease-out",
+          transform: open
+            ? `translateX(-${window.innerWidth}px)`
+            : `translateX(${window.innerWidth}px)`,
         },
-      );
-      mobileMenuBackdrop.classList.toggle("pointer-events-auto");
+      ],
+      {
+        duration: userPrefersReducedMotion ? 0 : 300,
+        fill: "forwards",
+        easing: open ? "ease-out" : "ease-in",
+      },
+    );
+    if (!mobileMenuBackdrop.classList.contains("pointer-events-none") || open)
       mobileMenuBackdrop.classList.toggle("pointer-events-none");
-    } else {
-      if (!mobileMenuBackdrop.classList.contains("pointer-events-auto"))
-        mobileMenuBackdrop.classList.toggle("pointer-events-auto");
-      if (!mobileMenuBackdrop.classList.contains("pointer-events-none"))
-        mobileMenuBackdrop.classList.toggle("pointer-events-none");
-      if (!mobileMenuBackdrop.classList.contains("opacity-0")) {
-        mobileMenuBackdrop.classList.toggle("opacity-0");
-        mobileMenu.animate(
-          [{ transform: `translateX(${window.innerWidth}px)` }],
-          {
-            duration: userPrefersReducedMotion ? 0 : 300,
-            fill: "forwards",
-            easing: "ease-in",
-          },
-        );
-      }
-    }
+    if (!mobileMenuBackdrop.classList.contains("opacity-0") || open)
+      mobileMenuBackdrop.classList.toggle("opacity-0");
   };
 
   mobileMenuOpen.addEventListener("click", () => {
@@ -52,11 +41,11 @@ document.addEventListener("DOMContentLoaded", () => {
     toggleMenu({ open: false });
   });
 
-  mobileMenuBackdrop.addEventListener("scroll", () => {
+  mobileMenuBackdrop.addEventListener("touchmove", () => {
     toggleMenu({ open: false });
   });
 
-  mobileMenuBackdrop.addEventListener("touchmove", () => {
+  window.addEventListener("scroll", () => {
     toggleMenu({ open: false });
   });
 

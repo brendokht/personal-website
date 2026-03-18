@@ -1,0 +1,63 @@
+---
+---
+
+<div
+  id="mobile-menu-container"
+  class="md:hidden flex justify-between max-w-3xl mx-auto"
+>
+  <h1 class="text-xl font-semibold"><a href="/">BK</a></h1>
+  <svg
+    id="mobile-menu-open"
+    xmlns="http://www.w3.org/2000/svg"
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    role="button"
+    aria-labelledby="mobile-menu-open"
+  >
+    <path d="M4 5h16" />
+    <path d="M4 12h16" />
+    <path d="M4 19h16" />
+  </svg>
+</div>
+<div class="relative z-50 -mx-4">
+  <nav
+    id="mobile-menu"
+    class="fixed h-screen bg-muted w-2/3 py-4 px-4 -right-[100vw] top-0 pt-8"
+  >
+    <ul
+      class="flex flex-col *:not-first:not-last:border-b *:border-white/25 **:[&>a]:py-6"
+    >
+      <li class="flex justify-end p-0! mb-4">
+        <svg
+          id="mobile-menu-close"
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          role="button"
+          aria-labelledby="mobile-menu-close"
+        >
+          <path d="M18 6 6 18" />
+          <path d="m6 6 12 12" />
+        </svg>
+      </li>
+      <li><a class="w-full block" href="/">Home</a></li>
+      <li><a class="w-full block" href="/about/">About</a></li>
+      <li><a class="w-full block" href="/projects/">Projects</a></li>
+      <li><a class="w-full block" href="/contact/">Contact</a></li>
+    </ul>
+  </nav>
+</div>
+
+<script src="../scripts/mobile-menu.ts"></script>

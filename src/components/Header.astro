@@ -1,7 +1,13 @@
-<header id="header" class="py-8 bg-muted/25 -mx-4 px-4 md:mx-0">
-  <div class="flex justify-between max-w-3xl mx-auto">
+---
+import MobileNavigation from "./MobileNavigation.astro";
+
+const MOBILE_BREAKPOINT = 768;
+---
+
+<header id="header" class="py-8 fixed w-full bg-muted -mx-4 px-4 z-50 md:mx-0">
+  <div class="hidden md:flex justify-between max-w-3xl mx-auto">
     <h1 class="text-xl font-semibold"><a href="/">BK</a></h1>
-    <nav>
+    <nav id="menu" class="md:block hidden">
       <ul class="flex gap-8">
         <li><a href="/">Home</a></li>
         <li><a href="/about/">About</a></li>
@@ -10,4 +16,10 @@
       </ul>
     </nav>
   </div>
+  <MobileNavigation client:media={`(max-width: ${MOBILE_BREAKPOINT}px`} />
 </header>
+<div
+  id="mobile-menu-backdrop"
+  class={`fixed inset-0 opacity-0 pointer-events-none z-40 bg-background/60 backdrop-blur-xs md:hidden transition-opacity duration-300`}
+  aria-hidden="true"
+/>
